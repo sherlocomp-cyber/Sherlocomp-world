@@ -43,6 +43,16 @@ Catatan: PHASE 1 ditandai selesai berdasarkan laporan lisan pengguna ("aman") se
 ### Sengaja BELUM ada di PHASE 1
 Penyimpanan IndexedDB dan profil banyak siswa (PHASE 6), aksesori karakter (aset sudah ada; PHASE 3), teks Arab dan font Arab (PHASE 3, D-008/D-009), NPC, quest, mini-game, audio, PWA/service worker (PHASE 8–9), Capacitor (PHASE 10).
 
-## PHASE 2–10
+## PHASE 2 — World Design — SEDANG BERJALAN
 
-Lihat `ROADMAP.md`. Belum dimulai. PHASE 2 (World Design) berikutnya; syarat selesai mencakup FPS terukur di Xiaomi Pad 7 Pro.
+### Tahap A: Animal Kingdom (tata letak, medan, dekor, anggaran) — SELESAI MENURUT LAPORAN LISAN (2026-10-31)
+- [x] Kode di `develop` (commit 4eb920c); uji Node `test:phase2` 17/17, `test:smoke` 28/28, `npm run build` berhasil (sandbox)
+- [~] Dijalankan pengguna di browser (`/?world=animal&debug=1`): dilaporkan "sudah bagus". Tidak ada rincian per fitur
+- [ ] FPS, draw call, segitiga di HP, Xiaomi Pad 7 Pro, laptop (Low/Medium/High) BELUM dilaporkan; tetapkan ulang anggaran D-033
+- [ ] Persetujuan guru/pengguna atas D-032 (pengelompokan hewan per wilayah)
+- [ ] Jadikan Animal Kingdom default setelah FPS disetujui (D-034)
+- [ ] Tahap B: Sickness Kingdom (Bab 3 penyakit); hewan/NPC sungguhan = PHASE 3
+
+## PHASE 3–10
+
+Lihat `ROADMAP.md`. Belum dimulai.

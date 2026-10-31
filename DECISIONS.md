@@ -35,6 +35,11 @@ Status: **Diusulkan** = pilihan Claude, belum disetujui pengguna. **Ditetapkan**
 | D-029 | Grafis: `low` = tanpa shadow map (diganti bayangan bulat), pixel ratio ≤1, kabut dekat; `medium` ≤1,5 + shadow 1024; `high` ≤2 + shadow 2048. **Gameplay identik di semua level.** Anti-alias hanya ditentukan saat game dimulai (ubah level lalu mulai ulang agar berlaku). Nilai awal ditebak dari `hardwareConcurrency`/`deviceMemory`/sentuh | Diputuskan Claude | Sesuai PROJECT_SPEC bagian 7. Ambang deteksi **belum divalidasi** di perangkat sebenarnya. |
 | D-030 | "Lembah Awal" PHASE 1 adalah area uji **tanpa materi pelajaran**: tidak ada teks Arab, kosakata, atau terjemahan ditampilkan; teks UI berbahasa Indonesia | Diputuskan Claude | Font Arab belum ditetapkan (D-008/D-009); menghindari menampilkan harakat yang belum diuji. |
 | D-031 | Hasil uji sandbox: registry npm dijawab **403 oleh kebijakan egress** (bukan gangguan jaringan). Sesi 3 **tidak mencari jalan memutar** (mirror/tarball lain). Build dan uji browser diserahkan kepada pengguna | Diputuskan Claude | Mematuhi kebijakan; tidak mengklaim "teruji". Sesi dengan akses npm (mis. Claude Code lokal) dapat melanjutkan. |
+| D-032 | Pengelompokan 21 hewan ke 6 wilayah (Savana, Rimba, Peternakan, Danau, Pasir, Taman Burung) adalah rancangan game (habitat umum), bukan isi buku | Diusulkan | Perlu persetujuan guru/pengguna. |
+| D-033 | Anggaran awal `src/core/budget.js`: Low 120 dc / 90k tri, Medium 220 / 160k, High 300 / 240k | Diusulkan | Angka TEBAKAN; tetapkan ulang setelah FPS nyata diukur. |
+| D-034 | Animal Kingdom opt-in lewat `?world=animal`; dunia PHASE 1 tidak diubah (`worldId` di `Game`) | Diputuskan Claude | Jadikan default setelah FPS disetujui. |
+| D-035 | Logika tata letak/medan/dekor dipisah murni dari Three.js: `animal-layout.js`, `terrain-animal.js`, `animal-plan.js`; dekor lewat InstancedMesh | Diputuskan Claude | Lanjutan D-027; teruji di Node. |
+| D-036 | Jalan setapak rata; dekor berkolisi dijaga >=3,4 satuan dari garis tengah jalan; diuji otomatis | Diputuskan Claude | Jalan ke tiap wilayah tidak terhalang. |
 
 ## Penjelasan singkat APK debug vs release (diminta Directive)
 
