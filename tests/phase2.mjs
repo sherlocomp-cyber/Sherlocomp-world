@@ -1,7 +1,7 @@
 // Uji Node PHASE 2 (Animal Kingdom): logika murni saja — tata letak, medan, rencana dekorasi, anggaran.
 // BUKAN uji WebGL/tampilan/FPS. Jalankan: npm run test:phase2  (atau: node tests/phase2.mjs)
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -178,6 +178,35 @@ test('anggaran: batas naik dari Low ke High; checkBudget menandai pelanggaran', 
   const bad = B.checkBudget({ calls: 999, triangles: 1e7 }, 'low');
   eq(bad.ok, false);
   eq(bad.issues.length, 2, 'jumlah isu');
+});
+
+const CR = await imp('src/game/camera-rig.js');
+test('kamera: tanpa penghalang tidak ditarik; penghalang besar di belakang menarik kamera; yang kecil diabaikan', () => {
+  const t = { x: 0, y: 1.5, z: 0 };
+  const off = CR.cameraOffset(0, 0.35); // kamera di sisi +z
+  near(CR.occludeScale(t, off, []), 1, 1e-9, 'tanpa penghalang');
+  const wall = [{ x: 0, z: 4, r: 1.5 }];
+  const s = CR.occludeScale(t, off, wall);
+  ok(s < 1 && s >= CR.CAMERA_OCCLUDER.minScale, 'skala harus < 1');
+  const cam = { x: t.x + off.x * s, z: t.z + off.z * s };
+  ok(Math.hypot(cam.x - 0, cam.z - 4) >= 1.5 + CR.CAMERA_OCCLUDER.margin - 1e-6, 'kamera harus di luar penghalang + margin');
+  near(CR.occludeScale(t, off, [{ x: 0, z: 4, r: 0.22 }]), 1, 1e-9, 'tiang pagar diabaikan');
+  near(CR.occludeScale(t, off, [{ x: 0, z: -4, r: 1.5 }]), 1, 1e-9, 'penghalang di depan pemain tidak menarik');
+  eq(CR.occludeScale({ x: 0, y: 0, z: 2.5 }, off, wall), CR.CAMERA_OCCLUDER.minScale, 'menempel di dinding -> skala minimum');
+});
+
+const ART = await imp('src/worlds/animal-art.js');
+test('gambar hewan: tiap tempat punya gambar; file ada di repo dan cocok dengan manifest', () => {
+  const manifest = JSON.parse(readFileSync(join(ROOT, 'public/assets/manifest.json'), 'utf8'));
+  const byVocab = Object.fromEntries(manifest.assets.filter((a) => a.kind === 'animal' && a.vocab_id).map((a) => [a.vocab_id, a.file.split('/').pop()]));
+  for (const s of L.STATIONS) {
+    const f = ART.animalImageFile(s.vocabId);
+    ok(f, 'tidak ada gambar untuk ' + s.vocabId);
+    eq(f, byVocab[s.vocabId], 'manifest ' + s.vocabId);
+    ok(existsSync(join(ROOT, 'public/assets/images/animals', f)), 'file tidak ada: ' + f);
+    const sz = ART.animalSize(s.vocabId);
+    ok(sz > 0.5 && sz < 4, 'ukuran tidak wajar ' + s.vocabId);
+  }
 });
 
 const failed = results.filter((r) => !r.ok);

@@ -13,7 +13,7 @@ import { load, save } from '../core/storage.js';
 import { createHero } from '../characters/hero.js';
 import { buildStarterArea, SPAWN as STARTER_SPAWN } from '../worlds/starter-area.js';
 import { buildAnimalKingdom } from '../worlds/animal-kingdom.js';
-import { CAMERA, clampPitch, cameraOffset } from './camera-rig.js';
+import { CAMERA, clampPitch, cameraOffset, occludeScale } from './camera-rig.js';
 
 const STARS_KEY = 'p1.stars';
 
@@ -171,6 +171,10 @@ export class Game {
       z: this.pos.z,
     };
     const off = cameraOffset(this.yaw, this.pitch);
+    const sc = occludeScale(target, off, this.world.colliders);
+    off.x *= sc;
+    off.y *= sc;
+    off.z *= sc;
     const desired = new THREE.Vector3(target.x + off.x, target.y + off.y, target.z + off.z);
     const minY = this.heightAt(desired.x, desired.z) + CAMERA.minAboveGround;
     if (desired.y < minY) desired.y = minY;
@@ -365,7 +369,7 @@ export class Game {
     this.scene.traverse((o) => {
       if (o.geometry) o.geometry.dispose();
       const m = o.material;
-      if (m) (Array.isArray(m) ? m : [m]).forEach((x) => x.dispose());
+      if (m) (Array.isArray(m) ? m : [m]).forEach((x) => { if (x.map) x.map.dispose(); x.dispose(); });
     });
     this.renderer.dispose();
     this.canvas.remove();

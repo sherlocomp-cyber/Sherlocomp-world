@@ -11,6 +11,8 @@ import {
   STAR_POSITIONS, FIXED_COLLIDERS, distToPath, zoneAt,
 } from './animal-layout.js';
 import { buildPlan, mulberry32 } from './animal-plan.js';
+import { animalImageFile, animalSize, ANIMAL_PEDESTAL_TOP } from './animal-art.js';
+import { ASSET_BASE } from '../core/config.js';
 
 export { SPAWN, zoneAt };
 
@@ -280,6 +282,28 @@ export function buildAnimalKingdom({ collectedIds = [] } = {}) {
   const rings = STATIONS.map((s) => ({ x: s.x, z: s.z, oy: 0.4, sx: 1, sy: 1, sz: 1, c: ZONES.find((z) => z.id === s.zoneId).color }));
   add(instanced(new THREE.CylinderGeometry(0.7, 0.85, 0.36, 10), pedestals, { receive: true }));
   add(instanced(new THREE.CylinderGeometry(0.55, 0.55, 0.1, 10), rings, { cast: false }));
+  // ---- gambar hewan di atas pedestal (billboard; selalu menghadap kamera). Hewan 3D = PHASE 3.
+  const loader = new THREE.TextureLoader();
+  const animalSprites = [];
+  for (const s of STATIONS) {
+    const file = animalImageFile(s.vocabId);
+    if (!file) continue;
+    const mat = new THREE.SpriteMaterial({ transparent: true, alphaTest: 0.35, fog: true });
+    loader.load(ASSET_BASE + 'images/animals/' + file, (tex) => {
+      tex.colorSpace = THREE.SRGBColorSpace;
+      mat.map = tex;
+      mat.needsUpdate = true;
+    });
+    const size = animalSize(s.vocabId);
+    const sprite = new THREE.Sprite(mat);
+    sprite.center.set(0.5, 0); // alas gambar tepat di atas pedestal
+    sprite.scale.set(size, size, 1);
+    sprite.position.set(s.x, heightAt(s.x, s.z) + ANIMAL_PEDESTAL_TOP, s.z);
+    sprite.name = 'animal-' + s.vocabId;
+    group.add(sprite);
+    animalSprites.push(sprite);
+  }
+
   const signList = [...ZONE_SIGNS, { zoneId: 'hub', x: HUB_SIGN.x, z: HUB_SIGN.z, ry: 0.3 }];
   add(instanced(geo(new THREE.CylinderGeometry(0.07, 0.09, 1.5, 6), 0.75), signList.map((s) => ({ x: s.x, z: s.z, ry: s.ry, c: '#7a5232' }))));
   add(
@@ -323,7 +347,7 @@ export function buildAnimalKingdom({ collectedIds = [] } = {}) {
       z: s.z,
       radius: 2.2,
       prompt: 'Lihat tempat',
-      message: `Tempat ${names[s.vocabId] || 'hewan'}. Hewannya akan datang nanti!`,
+      message: `Ini ${names[s.vocabId] || 'hewan'}!`,
     })),
   ];
 
