@@ -40,6 +40,11 @@ Status: **Diusulkan** = pilihan Claude, belum disetujui pengguna. **Ditetapkan**
 | D-034 | Animal Kingdom opt-in lewat `?world=animal`; dunia PHASE 1 tidak diubah (`worldId` di `Game`) | Diputuskan Claude | Jadikan default setelah FPS disetujui. |
 | D-035 | Logika tata letak/medan/dekor dipisah murni dari Three.js: `animal-layout.js`, `terrain-animal.js`, `animal-plan.js`; dekor lewat InstancedMesh | Diputuskan Claude | Lanjutan D-027; teruji di Node. |
 | D-036 | Jalan setapak rata; dekor berkolisi dijaga >=3,4 satuan dari garis tengah jalan; diuji otomatis | Diputuskan Claude | Jalan ke tiap wilayah tidak terhalang. |
+| D-037 | Sickness Kingdom "Kota Sehat" opt-in lewat `?world=sickness` (`worldId` `'sickness'` di `Game`); dunia membawa `atmosphere` sendiri (langit/kabut mint). Dunia PHASE 1 dan Animal Kingdom tidak diubah. Bintang disimpan di `p2.sickness.stars` | Diputuskan Claude | Sejajar D-034. Jadikan default hanya setelah FPS disetujui. |
+| D-038 | Pengelompokan 14 kosakata inti Bab 3 ke 5 wilayah (Rumah Sakit: rumah sakit/dokter/perawat; Apotek: apotek/resep/obat; Taman Kepala: sakit kepala/sakit mata/sakit gigi; Taman Perut: sakit perut/diare; Taman Flu dan Demam: batuk/flu/demam) adalah rancangan game, bukan isi buku | Diusulkan | Perlu persetujuan guru/pengguna (sejalan D-032). |
+| D-039 | Perkakas render bersama baru `src/worlds/world-kit.js` (lambert, instanced, starShape, buildClouds) dipakai Sickness Kingdom. `animal-kingdom.js` sengaja TIDAK diubah | Diputuskan Claude | Animal Kingdom sudah dilaporkan "bagus"; hindari regresi. Penyatuan = rapi-rapi nanti. |
+| D-040 | Tanda medis di dunia (gedung, tugu) memakai tanda tambah HIJAU (D-014). Aset `health_wasfa` dipakai sementara walau memuat simbol merah | Diputuskan Claude | Mengikuti catatan manifest; minta Flow membuat ulang `health_wasfa`. |
+| D-041 | Sickness Kingdom hanya menampilkan teks Indonesia (kata dari `bab3-penyakit.json` lewat ID); teks Arab dan harakat menunggu PHASE 3 | Diputuskan Claude | Sejalan D-030; font Arab belum ditetapkan (D-008/D-009). |
 
 ## Penjelasan singkat APK debug vs release (diminta Directive)
 

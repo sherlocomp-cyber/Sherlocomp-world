@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 2026-11-01 — PHASE 2 tahap B: Sickness Kingdom "Kota Sehat" (sesi 6) — BELUM DIUJI DI BROWSER
+
+### Ditambahkan
+- Dunia Sickness Kingdom (radius 100, tanpa air): hub + 5 wilayah (Rumah Sakit, Apotek, Taman Kepala, Taman Perut, Taman Flu dan Demam), jalan setapak, 5 bintang, pedestal 14 kosakata inti Bab 3 dengan gambar kosakata.
+- `src/worlds/sickness-{kingdom,layout,plan,art}.js`, `src/core/terrain-sickness.js`, `src/worlds/world-kit.js`, `tests/phase2b.mjs` (`npm run test:phase2b`), `docs/PHASE2_TAHAP_B.md`.
+- Keputusan D-037 s/d D-041.
+
+### Diubah
+- `src/game/game.js`: opsi `worldId` menerima `'sickness'`; dunia boleh membawa `atmosphere` (warna langit/kabut). Jalur starter dan animal tidak diubah.
+- `src/main.js`: parameter `?world=sickness`; label versi per dunia.
+- `package.json`: skrip `test:phase2b`.
+
+### Diketahui
+- Sandbox: `test:phase2b` 19/19 (data minimal di sandbox) + uji alur dengan tiruan Three.js. `npm install`/`npm run build` TIDAK dijalankan sesi ini (three asli tak bisa dipasang di sandbox). Ini bukan uji WebGL.
+- `test:smoke` dan `test:phase2` tidak dijalankan ulang sesudah `game.js`/`main.js` diubah.
+- Pengguna melaporkan lisan (2026-11-01) tahap B "sudah aman" di Xiaomi Pad 7. Tidak ada rincian dan tidak ada angka FPS; FPS terukur dan uji rinci BELUM ada.
+- `HANDOFF.md`, `TASKS.md`, `CHANGELOG.md`, `TEST_REPORT.md`, `DECISIONS.md`, `NEXT_SESSION_PROMPT.md` diperbarui.
+
 ## 2026-10-31 — PHASE 2 tahap A: Animal Kingdom (dilaporkan "sudah bagus")
 
 ### Ditambahkan (commit 4eb920c, `develop`)

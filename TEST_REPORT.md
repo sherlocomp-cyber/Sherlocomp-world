@@ -149,3 +149,15 @@ Sandbox (repo asli, `develop` 4eb920c): `npm install` berhasil; `npm run test:sm
 Browser (pengguna): membuka `/?world=animal&debug=1`, dilaporkan "sudah bagus" (laporan lisan, tanpa rincian).
 
 BELUM DIUJI / JANGAN DIKLAIM: FPS, draw call, segitiga di HP/Xiaomi Pad 7 Pro/laptop; sentuhan; penyimpanan bintang setelah muat ulang; pencahayaan; kamera menembus bukit di tepi dunia.
+
+## Sesi 6 — PHASE 2 tahap B: Sickness Kingdom (2026-11-01)
+
+Sandbox: `node tests/phase2b.mjs` 19/19 lulus. `config.js`, `bab3-penyakit.json`, `manifest.json` di sandbox adalah SALINAN MINIMAL dan 14 berkas gambar kosong; kode `sickness-*`, `terrain-sickness`, `world-kit` adalah salinan persis. Jalankan ulang di repo asli.
+Uji negatif (data dirusak di salinan; uji harus gagal): lingkar tempat kata dekat landmark → gagal; papan hub di jalan setapak → gagal; satu kosakata hilang → gagal (2 uji). Semua tertangkap.
+Uji alur dengan TIRUAN Three.js (bukan three asli, bukan WebGL): `buildSicknessKingdom()` → 5 bintang, 20 objek interaktif, 14 sprite, 6 grup, 14 InstancedMesh (semua instance bermatriks), 14 URL gambar unik cocok dengan berkas di repo, `update()` 120 frame tanpa galat. `node --check` lolos untuk `world-kit.js` dan `sickness-kingdom.js`.
+Keterbatasan sesi: `npm install` three asli GAGAL di sandbox (registry npm tidak terjangkau: nama host tak ter-resolve). Salinan file PC → sandbox lewat alat bantu juga gagal; file disusun ulang lewat teks. `npm run build`, `test:smoke`, `test:phase2` TIDAK dijalankan sesudah `game.js`/`main.js` diubah.
+
+BELUM DIUJI / JANGAN DIKLAIM: tampilan di browser (WebGL); API Three.js asli untuk geometri baru (prisma atap rumah kaca, ExtrudeGeometry bintang di dunia ini); FPS, draw call, segitiga di perangkat; sentuhan; penyimpanan bintang `p2.sickness.stars`; arah pintu landmark; pencahayaan; `npm run build`; regresi Animal Kingdom/PHASE 1 setelah `game.js` diubah.
+Daftar uji manual: `docs/PHASE2_TAHAP_B.md`.
+
+Browser (pengguna, 2026-11-01): membuka `/?world=sickness&debug=1` di Xiaomi Pad 7, dilaporkan "sudah aman" (laporan lisan, tanpa rincian). Tidak ada angka FPS, draw call, atau segitiga. Tidak dilaporkan: hasil `npm run build`/`test:smoke`/`test:phase2`, cek ulang `?world=animal` dan PHASE 1, penyimpanan bintang, sentuhan per fitur.

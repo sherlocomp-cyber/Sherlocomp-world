@@ -1,12 +1,18 @@
 // Titik masuk: loading → menu → buat karakter → game. PHASE 1 Foundation; PHASE 2 menambah dunia
-// "Animal Kingdom" yang dibuka lewat alamat dengan ?world=animal (tambahkan &debug=1 untuk FPS/draw call).
+// "Animal Kingdom" (?world=animal) dan "Sickness Kingdom" (?world=sickness); tambahkan &debug=1 untuk FPS/draw call.
 
 import { APP_VERSION, PRELOAD_IMAGES, SHIRT_COLORS, asset } from './core/config.js';
 import { load, save } from './core/storage.js';
 import { QUALITY_LEVELS, detectDefaultQuality, isValidQuality } from './core/quality.js';
 import { $, showScreen, toast, hideToast, setupQualitySegments, buildSwatches, toggleFullscreen } from './ui/ui.js';
 
-const WORLD_ID = new URLSearchParams(location.search).get('world') === 'animal' ? 'animal' : 'starter';
+const WORLD_PARAM = new URLSearchParams(location.search).get('world');
+const WORLD_ID = WORLD_PARAM === 'animal' || WORLD_PARAM === 'sickness' ? WORLD_PARAM : 'starter';
+const VERSION_LABELS = {
+  animal: 'PHASE 2 Animal Kingdom (uji)',
+  sickness: 'PHASE 2 Sickness Kingdom (uji)',
+  starter: 'PHASE 1 Foundation',
+};
 
 const state = {
   profile: load('profile', null), // {name, gender, color}
@@ -191,8 +197,7 @@ function leaveGame() {
 
 // ---------------------------------------------------------------- boot
 function wire() {
-  $('version').textContent =
-    WORLD_ID === 'animal' ? `v${APP_VERSION} · PHASE 2 Animal Kingdom (uji)` : `v${APP_VERSION} · PHASE 1 Foundation`;
+  $('version').textContent = `v${APP_VERSION} · ${VERSION_LABELS[WORLD_ID]}`;
 
   // menu
   $('m-play').addEventListener('click', () => (state.profile ? startGame() : openCreate()));
