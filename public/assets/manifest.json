@@ -1,0 +1,518 @@
+{
+ "schema_version": "1.0",
+ "generated": "2026-10-31",
+ "base": "public/assets/",
+ "format_note": "Potongan = WebP berkanal alpha (latar magenta sudah dihapus). Latar lebar = JPG. Logo/ikon aplikasi = PNG opaque.",
+ "summary": {
+  "received": 40,
+  "expected_core": 108,
+  "still_missing": 68
+ },
+ "status": "diterima, belum disetujui pengguna secara eksplisit",
+ "missing": {
+  "animal_cards_missing": {
+   "vocab": [
+    "b2-v14 hirba",
+    "b2-v13 karkadann",
+    "b2-v15 qird",
+    "b2-v16 tuban",
+    "b2-v17 namir",
+    "b2-v18 timsah",
+    "b2-v19 baqarah",
+    "b2-v20 hamamah",
+    "b2-v21 samak",
+    "b2-x01 namlah",
+    "b2-x02 dajajah"
+   ],
+   "count": 11
+  },
+  "health_cards_missing": {
+   "count": 14,
+   "slugs": [
+    "ishal",
+    "suda",
+    "sual",
+    "zukam",
+    "humma",
+    "alam_maida",
+    "alam_asnan",
+    "iltihab_ainain",
+    "wasfa",
+    "dawa",
+    "tabib",
+    "mumarrida",
+    "mustashfa",
+    "saydaliya"
+   ]
+  },
+  "sky_missing": {
+   "count": 2
+  },
+  "textures_missing": {
+   "count": 10
+  },
+  "ui_icons_missing": {
+   "count": 15
+  },
+  "badges_missing": {
+   "count": 10
+  },
+  "story_panels_missing": {
+   "count": 6
+  }
+ },
+ "assets": [
+  {
+   "id": "acc_backpack",
+   "file": "images/accessories/acc_backpack.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 14342,
+   "vocab_id": null,
+   "source_file": "Adventurer_backpack_cutout_0618706b.jpg"
+  },
+  {
+   "id": "menu_bg_animal",
+   "file": "images/brand/menu_bg_animal.jpg",
+   "kind": "background",
+   "width": 1376,
+   "height": 768,
+   "alpha": false,
+   "bytes": 360687,
+   "vocab_id": null,
+   "source_file": "Animal_Kingdom_tropical_jungle_l#U2026_a31af13a.jpg",
+   "note": "Dikirim 1376x768 (16:9), bukan 1920x1080; disimpan JPG."
+  },
+  {
+   "id": "animal_dubb",
+   "file": "images/animals/animal_dubb.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 32736,
+   "vocab_id": "b2-v10",
+   "source_file": "Bear_standing_in_friendly_pose_86f495f3.jpg"
+  },
+  {
+   "id": "acc_bowtie",
+   "file": "images/accessories/acc_bowtie.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 7988,
+   "vocab_id": null,
+   "source_file": "Berry-red_bowtie_cutout_34c377e8.jpg"
+  },
+  {
+   "id": "hero_boy_full",
+   "file": "images/characters/hero_boy_full.webp",
+   "kind": "hero_full",
+   "width": 768,
+   "height": 1376,
+   "alpha": true,
+   "bytes": 71612,
+   "vocab_id": null,
+   "source_file": "Boy_standing_in_neutral_pose_537ac686.jpg",
+   "note": "Dikirim 768x1376 (9:16), bukan 1024x1536 (2:3) seperti spesifikasi; dipakai apa adanya."
+  },
+  {
+   "id": "hero_boy_portrait",
+   "file": "images/characters/hero_boy_portrait.webp",
+   "kind": "hero_portrait",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 50732,
+   "vocab_id": null,
+   "source_file": "Boy_wearing_tunic_and_vest_6c62c45c.jpg"
+  },
+  {
+   "id": "acc_glasses",
+   "file": "images/accessories/acc_glasses.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 9674,
+   "vocab_id": null,
+   "source_file": "Brown_round_eyeglasses_cutout_17bf0808.jpg"
+  },
+  {
+   "id": "npc_virus_boss",
+   "file": "images/npcs/npc_virus_boss.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 59160,
+   "vocab_id": null,
+   "source_file": "Cartoon_monster_smiling_portrait_b9611ab9.jpg"
+  },
+  {
+   "id": "splash_art",
+   "file": "images/brand/splash_art.jpg",
+   "kind": "background",
+   "width": 1376,
+   "height": 768,
+   "alpha": false,
+   "bytes": 270525,
+   "vocab_id": null,
+   "source_file": "Children_standing_at_kingdom_gate_35a79106.jpg",
+   "note": "Dikirim 1376x768 (16:9), bukan 1920x1080; disimpan JPG."
+  },
+  {
+   "id": "acc_cap",
+   "file": "images/accessories/acc_cap.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 15318,
+   "vocab_id": null,
+   "source_file": "Colorful_adventure_cap_cutout_6661779f.jpg"
+  },
+  {
+   "id": "acc_scarf",
+   "file": "images/accessories/acc_scarf.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 14434,
+   "vocab_id": null,
+   "source_file": "Cozy_warm_scarf_cutout_7dbe8ad2.jpg"
+  },
+  {
+   "id": "app_icon",
+   "file": "images/brand/app_icon.png",
+   "kind": "icon",
+   "width": 1024,
+   "height": 1024,
+   "alpha": false,
+   "bytes": 1057228,
+   "vocab_id": null,
+   "source_file": "Crown_above_compass_game_icon_57eafb83.jpg",
+   "note": "PNG opaque 1024x1024 (ikon rounded-square bawaan gambar; periksa maskable/adaptive icon saat PHASE 10)."
+  },
+  {
+   "id": "animal_jamal",
+   "file": "images/animals/animal_jamal.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 56600,
+   "vocab_id": "b2-v09",
+   "source_file": "Cute_camel_in_friendly_pose_0ab4002e.jpg"
+  },
+  {
+   "id": "animal_ghazal",
+   "file": "images/animals/animal_ghazal.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 41062,
+   "vocab_id": "b2-v07",
+   "source_file": "Cute_deer_standing_cutout_illust#U2026_1c3fcd92.jpg"
+  },
+  {
+   "id": "animal_batta",
+   "file": "images/animals/animal_batta.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 31856,
+   "vocab_id": "b2-v06",
+   "source_file": "Cute_duck_illustration_a03dcf12.jpg"
+  },
+  {
+   "id": "animal_fil",
+   "file": "images/animals/animal_fil.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 36390,
+   "vocab_id": "b2-v03",
+   "source_file": "Cute_elephant_3D_cutout_illustra#U2026_8844ea33.jpg"
+  },
+  {
+   "id": "animal_zarafah",
+   "file": "images/animals/animal_zarafah.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 42212,
+   "vocab_id": "b2-v04",
+   "source_file": "Cute_giraffe_illustration_d5315bd3.jpg"
+  },
+  {
+   "id": "animal_hisan",
+   "file": "images/animals/animal_hisan.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 32926,
+   "vocab_id": "b2-v08",
+   "source_file": "Cute_horse_illustration_42a8e20a.jpg"
+  },
+  {
+   "id": "animal_asad",
+   "file": "images/animals/animal_asad.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 62922,
+   "vocab_id": "b2-v11",
+   "source_file": "Cute_lion_standing_pose_e799cdc4.jpg"
+  },
+  {
+   "id": "pet_pigeon",
+   "file": "images/pets/pet_pigeon.webp",
+   "kind": "pet",
+   "width": 512,
+   "height": 512,
+   "alpha": true,
+   "bytes": 22708,
+   "vocab_id": null,
+   "source_file": "Cute_pigeon_pet_cutout_6d2a01d3.jpg"
+  },
+  {
+   "id": "animal_sulhafah",
+   "file": "images/animals/animal_sulhafah.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 48084,
+   "vocab_id": "b2-v02",
+   "source_file": "Cute_turtle_illustration_fd8c33f1.jpg",
+   "note": "Lihat catatan pet_turtle."
+  },
+  {
+   "id": "pet_turtle",
+   "file": "images/pets/pet_turtle.webp",
+   "kind": "pet",
+   "width": 512,
+   "height": 512,
+   "alpha": true,
+   "bytes": 20258,
+   "vocab_id": null,
+   "source_file": "Cute_turtle_pet_illustration_282175a3.jpg",
+   "note": "Diasumsikan: kura-kura bulat lucu = pet; kura-kura besar = animal_sulhafah. Tukar jika terbalik."
+  },
+  {
+   "id": "animal_dzib",
+   "file": "images/animals/animal_dzib.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 36052,
+   "vocab_id": "b2-v12",
+   "source_file": "Cute_wolf_standing_on_magenta_7261af53.jpg"
+  },
+  {
+   "id": "npc_explorer",
+   "file": "images/npcs/npc_explorer.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 68444,
+   "vocab_id": null,
+   "source_file": "Explorer_guide_holding_binoculars_f53ecb22.jpg"
+  },
+  {
+   "id": "npc_ranger",
+   "file": "images/npcs/npc_ranger.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 61326,
+   "vocab_id": null,
+   "source_file": "Forest_ranger_portrait_cutout_c8f7bea5.jpg"
+  },
+  {
+   "id": "hero_girl_full",
+   "file": "images/characters/hero_girl_full.webp",
+   "kind": "hero_full",
+   "width": 768,
+   "height": 1376,
+   "alpha": true,
+   "bytes": 57284,
+   "vocab_id": null,
+   "source_file": "Girl_standing_in_neutral_pose_4a95c432.jpg",
+   "note": "Dikirim 768x1376 (9:16), bukan 1024x1536 (2:3) seperti spesifikasi; dipakai apa adanya."
+  },
+  {
+   "id": "hero_girl_portrait",
+   "file": "images/characters/hero_girl_portrait.webp",
+   "kind": "hero_portrait",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 48370,
+   "vocab_id": null,
+   "source_file": "Girl_wearing_hijab_portrait_a66d9e3e.jpg"
+  },
+  {
+   "id": "logo_mark",
+   "file": "images/brand/logo_mark.png",
+   "kind": "logo",
+   "width": 1024,
+   "height": 1024,
+   "alpha": false,
+   "bytes": 835636,
+   "vocab_id": null,
+   "source_file": "Golden_crown_above_navigational_#U2026_5b68f6a1.jpg",
+   "note": "PNG opaque 1024x1024, latar indigo penuh (bukan transparan)."
+  },
+  {
+   "id": "acc_crown",
+   "file": "images/accessories/acc_crown.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 13884,
+   "vocab_id": null,
+   "source_file": "Golden_crown_with_colorful_gems_dc6e5d08.jpg"
+  },
+  {
+   "id": "npc_lion_king",
+   "file": "images/npcs/npc_lion_king.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 94482,
+   "vocab_id": null,
+   "source_file": "Lion_wearing_crown_portrait_592fa2ab.jpg"
+  },
+  {
+   "id": "npc_pharmacist",
+   "file": "images/npcs/npc_pharmacist.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 48580,
+   "vocab_id": null,
+   "source_file": "Male_pharmacist_wearing_glasses_#U2026_1344763e.jpg"
+  },
+  {
+   "id": "npc_nurse",
+   "file": "images/npcs/npc_nurse.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 51096,
+   "vocab_id": null,
+   "source_file": "Nurse_wearing_hijab_and_uniform_7af796dc.jpg"
+  },
+  {
+   "id": "animal_tawus",
+   "file": "images/animals/animal_tawus.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 103690,
+   "vocab_id": "b2-v05",
+   "source_file": "Peacock_cutout_illustration_085f9113.jpg"
+  },
+  {
+   "id": "animal_arnab",
+   "file": "images/animals/animal_arnab.webp",
+   "kind": "animal",
+   "width": 768,
+   "height": 768,
+   "alpha": true,
+   "bytes": 34890,
+   "vocab_id": "b2-v01",
+   "source_file": "Rabbit_illustration_53a4f28c.jpg",
+   "note": "Lihat catatan pet_rabbit."
+  },
+  {
+   "id": "acc_headband",
+   "file": "images/accessories/acc_headband.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 10396,
+   "vocab_id": null,
+   "source_file": "Sporty_headband_cutout_f592232f.jpg",
+   "note": "KUALITAS LEMAH: terlihat seperti gelang/cincin hijau, bukan ikat kepala. Disarankan dibuat ulang di Flow."
+  },
+  {
+   "id": "menu_bg_sickness",
+   "file": "images/brand/menu_bg_sickness.jpg",
+   "kind": "background",
+   "width": 1376,
+   "height": 768,
+   "alpha": false,
+   "bytes": 326514,
+   "vocab_id": null,
+   "source_file": "Stylized_townscape_illustration_37b609e2.jpg",
+   "note": "Dikirim 1376x768 (16:9), bukan 1920x1080; disimpan JPG."
+  },
+  {
+   "id": "acc_cape",
+   "file": "images/accessories/acc_cape.webp",
+   "kind": "accessory",
+   "width": 256,
+   "height": 256,
+   "alpha": true,
+   "bytes": 8666,
+   "vocab_id": null,
+   "source_file": "Superhero_cape_cutout_0e311ec5.jpg"
+  },
+  {
+   "id": "pet_rabbit",
+   "file": "images/pets/pet_rabbit.webp",
+   "kind": "pet",
+   "width": 512,
+   "height": 512,
+   "alpha": true,
+   "bytes": 26742,
+   "vocab_id": null,
+   "source_file": "White_rabbit_cutout_illustration_3d06a5c5.jpg",
+   "note": "Diasumsikan: versi kelinci yang lucu/berbulu = pet; versi berdiri = animal_arnab. Tukar jika terbalik."
+  },
+  {
+   "id": "npc_doctor",
+   "file": "images/npcs/npc_doctor.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 54694,
+   "vocab_id": null,
+   "source_file": "Woman_doctor_wearing_hijab_portrait_f28a249d.jpg"
+  },
+  {
+   "id": "npc_teacher",
+   "file": "images/npcs/npc_teacher.webp",
+   "kind": "npc",
+   "width": 1024,
+   "height": 1024,
+   "alpha": true,
+   "bytes": 68928,
+   "vocab_id": null,
+   "source_file": "Woman_holding_attendance_book_76d31a1c.jpg"
+  }
+ ]
+}
