@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "_catatan": "Transkripsi manual dari halaman scan PDF 'Bahasa-arab-3-bab-3.pdf'. Harakat dipertahankan sebagaimana tercetak. meaning_source: book_text = kata Indonesia tertulis di buku; book_picture = hanya dari gambar+label di buku; general_knowledge = tidak ada di buku, WAJIB diverifikasi guru. verify:true = perlu dicek ulang terhadap PDF.",
+  "lesson": {
+    "id": "bab3",
+    "world": "sickness-kingdom",
+    "lesson_ar": "الدَّرْسُ الثَّالِثُ",
+    "title_ar": "الْأَمْرَاضُ",
+    "title_id": "Penyakit",
+    "book": "Semangat Belajar Bahasa Arab untuk MI Kelas III",
+    "pages_present": "55-73 (19 halaman lengkap sesuai PDF)",
+    "pages_missing_note": "Latihan التراكيب bagian B berakhir di halaman 73 dengan soal 2; kemungkinan berlanjut ke halaman 74 yang tidak ada di PDF.",
+    "learning_objectives_id": [
+      "Mendengarkan komponen bahasa seperti fonem, kata, intonasi, dan penanda wacana tentang topik penyakit.",
+      "Meniru kata, frasa, dan kalimat tentang topik penyakit.",
+      "Membaca huruf dan memahami kata, serta tanda baca dalam teks tertulis atau teks visual tentang topik penyakit.",
+      "Meniru dan memaparkan huruf, kata, tanda baca, dan kalimat yang sangat sederhana tentang topik penyakit."
+    ]
+  },
+  "vocab": [
+    {"id": "b3-v01", "ar": "إِسْهَالٌ", "id_text": "diare", "meaning_source": "book_text", "page": 56, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v02", "ar": "صُدَاعٌ", "id_text": "sakit kepala", "meaning_source": "book_text", "page": 56, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v03", "ar": "سُعَالٌ", "id_text": "batuk", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v04", "ar": "زُكَامٌ", "id_text": "flu", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v05", "ar": "حُمَّى", "id_text": "demam", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v06", "ar": "أَلَمٌ فِي الْمَعِدَةِ", "id_text": "sakit perut", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v07", "ar": "أَلَمُ الْأَسْنَانِ", "id_text": "sakit gigi", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit"},
+    {"id": "b3-v08", "ar": "الْتِهَابُ الْعَيْنَيْنِ", "id_text": "sakit mata", "meaning_source": "book_text", "page": 57, "tier": "core", "category": "penyakit", "note": "Daftar kosakata hlm 56 mencetak اِلْتِهَابُ (hamzah wasal); label gambar hlm 57 mencetak إِلْتِهَابُ."},
+    {"id": "b3-v09", "ar": "وَصْفَةٌ", "id_text": "resep", "meaning_source": "book_text", "page": 58, "tier": "core", "category": "kesehatan"},
+    {"id": "b3-v10", "ar": "دَوَاءٌ", "id_text": "obat", "meaning_source": "book_text", "page": 58, "tier": "core", "category": "kesehatan"},
+    {"id": "b3-v11", "ar": "طَبِيبٌ", "ar_alt": "طَبِيبَةٌ", "id_text": "dokter", "meaning_source": "book_text", "page": 58, "tier": "core", "category": "tempat_orang", "verify": true, "note": "Daftar hlm 56 dan latihan hlm 67 mencetak طَبِيبٌ; label gambar hlm 58 (dokter perempuan) mencetak طَبِيبَةٌ; soal susun huruf hlm 68 no.5 menghasilkan طَبِيبَةٌ."},
+    {"id": "b3-v12", "ar": "مُمَرِّضَةٌ", "id_text": "perawat", "meaning_source": "book_picture", "page": 58, "tier": "core", "category": "tempat_orang", "verify": true, "note": "Arti Indonesia tidak tertulis di buku; diambil dari gambar. Konfirmasi guru."},
+    {"id": "b3-v13", "ar": "مُسْتَشْفَى", "id_text": "rumah sakit", "meaning_source": "book_text", "page": 58, "tier": "core", "category": "tempat_orang"},
+    {"id": "b3-v14", "ar": "صَيْدَلِيَّةٌ", "id_text": "apotek", "meaning_source": "book_text", "page": 58, "tier": "core", "category": "tempat_orang", "note": "Buku menulis 'Apotik'."}
+  ],
+  "support_words": [
+    {"id": "b3-w01", "ar": "مَرِيضٌ", "id_text": "sakit (mudzakkar)", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w02", "ar": "مَرِيضَةٌ", "id_text": "sakit (muannats)", "meaning_source": "general_knowledge", "page": 62, "verify": true},
+    {"id": "b3-w03", "ar": "غَائِبٌ", "id_text": "tidak hadir", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w04", "ar": "غَائِبَةٌ", "id_text": "tidak hadir (muannats)", "meaning_source": "general_knowledge", "page": 62, "verify": true},
+    {"id": "b3-w05", "ar": "حَاضِرٌ", "id_text": "hadir", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w06", "ar": "حَاضِرَةٌ", "id_text": "hadir (muannats)", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w07", "ar": "تِلْمِيذٌ", "id_text": "murid (lk)", "meaning_source": "general_knowledge", "page": 69, "verify": true},
+    {"id": "b3-w08", "ar": "تِلْمِيذَةٌ", "id_text": "murid (pr)", "meaning_source": "general_knowledge", "page": 69, "verify": true},
+    {"id": "b3-w09", "ar": "الْمَدْرَسَةُ", "id_text": "sekolah", "meaning_source": "general_knowledge", "page": 69, "verify": true},
+    {"id": "b3-w10", "ar": "بَيْتٌ", "id_text": "rumah", "meaning_source": "general_knowledge", "page": 69, "verify": true},
+    {"id": "b3-w11", "ar": "الْآنَ", "id_text": "sekarang", "meaning_source": "general_knowledge", "page": 69, "verify": true},
+    {"id": "b3-w12", "ar": "كَشْفُ الْحُضُورِ", "id_text": "daftar hadir", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w13", "ar": "مَاذَا", "id_text": "apa", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w14", "ar": "لِمَاذَا", "id_text": "mengapa", "meaning_source": "general_knowledge", "page": 61, "verify": true},
+    {"id": "b3-w15", "ar": "أَيْنَ", "id_text": "di mana", "meaning_source": "general_knowledge", "page": 70, "verify": true},
+    {"id": "b3-w16", "ar": "لَا بَأْسَ", "id_text": "tidak apa-apa", "meaning_source": "general_knowledge", "page": 63, "verify": true},
+    {"id": "b3-w17", "ar": "شُكْرًا", "id_text": "terima kasih", "meaning_source": "general_knowledge", "page": 63, "verify": true},
+    {"id": "b3-w18", "ar": "آمِينْ", "id_text": "amin", "meaning_source": "general_knowledge", "page": 63},
+    {"id": "b3-w19", "ar": "إِذَنْ", "id_text": "kalau begitu", "meaning_source": "general_knowledge", "page": 62, "verify": true},
+    {"id": "b3-w20", "ar": "سَأُعَالِجُكَ", "id_text": "saya akan mengobatimu", "meaning_source": "general_knowledge", "page": 62, "verify": true},
+    {"id": "b3-w21", "ar": "يَشْرَبَانِ", "id_text": "(mereka berdua) minum", "meaning_source": "general_knowledge", "page": 68, "verify": true},
+    {"id": "b3-w22", "ar": "هُمَا", "id_text": "mereka berdua", "meaning_source": "general_knowledge", "page": 68, "verify": true}
+  ],
+  "dialogues": [
+    {
+      "id": "b3-dlg-A",
+      "title_id": "Percakapan antara para murid dan Bu guru",
+      "teacher_note": "Guru memberikan contoh percakapan, kemudian peserta didik diminta untuk memeragakannya.",
+      "pages": [61, 62],
+      "id_translation_status": "draft_unverified (buku tidak menyertakan terjemah dialog)",
+      "lines": [
+        {"n": 1, "speaker": "Bu guru", "ar": "سَأَقْرَأُ كَشْفَ الْحُضُورِ", "id_draft": "Saya akan membacakan daftar hadir."},
+        {"n": 2, "speaker": "Bu guru", "ar": "خَالِدٌ", "id_draft": "Khalid."},
+        {"n": 3, "speaker": "Khalid", "ar": "حَاضِرٌ", "id_draft": "Hadir."},
+        {"n": 4, "speaker": "Bu guru", "ar": "لَيْلَى", "id_draft": "Laila."},
+        {"n": 5, "speaker": "Laila", "ar": "حَاضِرَةٌ", "id_draft": "Hadir."},
+        {"n": 6, "speaker": "Bu guru", "ar": "لُقْمَانُ", "id_draft": "Lukman."},
+        {"n": 7, "speaker": "Murid", "ar": "غَائِبٌ", "id_draft": "Tidak hadir."},
+        {"n": 8, "speaker": "Bu guru", "ar": "لِمَاذَا", "id_draft": "Mengapa?"},
+        {"n": 9, "speaker": "Murid", "ar": "هُوَ مَرِيضٌ", "id_draft": "Dia sakit."},
+        {"n": 10, "speaker": "Bu guru", "ar": "مَاذَا أَصَابَهُ؟", "id_draft": "Sakit apa dia?"},
+        {"n": 11, "speaker": "Murid", "ar": "أَصَابَهُ سُعَالٌ", "id_draft": "Dia batuk."},
+        {"n": 12, "speaker": "Bu guru", "ar": "شَفَاهُ اللّٰهُ", "id_draft": "Semoga dia (lk) lekas sembuh.", "meaning_source": "book_text"},
+        {"n": 13, "speaker": "Bu guru", "ar": "نَادِيَا", "id_draft": "Nadia."},
+        {"n": 14, "speaker": "Murid", "ar": "غَائِبَةٌ", "id_draft": "Tidak hadir."},
+        {"n": 15, "speaker": "Bu guru", "ar": "لِمَاذَا", "id_draft": "Mengapa?"},
+        {"n": 16, "speaker": "Murid", "ar": "هِيَ مَرِيضَةٌ", "id_draft": "Dia (pr) sakit."},
+        {"n": 17, "speaker": "Bu guru", "ar": "مَاذَا أَصَابَهَا؟", "id_draft": "Sakit apa dia (pr)?"},
+        {"n": 18, "speaker": "Murid", "ar": "أَصَابَهَا زُكَامٌ", "id_draft": "Dia (pr) flu."},
+        {"n": 19, "speaker": "Bu guru", "ar": "شَفَاهَا اللّٰهُ", "id_draft": "Semoga dia (pr) lekas sembuh.", "meaning_source": "book_text"}
+      ]
+    },
+    {
+      "id": "b3-dlg-B",
+      "title_id": "Percakapan di dokter dan apotek",
+      "teacher_note": "Perhatikan percakapan berikut ini dan praktikkanlah!",
+      "pages": [62, 63],
+      "id_translation_status": "draft_unverified",
+      "lines": [
+        {"n": 1, "speaker": "Dokter", "ar": "مَاذَا أَصَابَكَ؟", "id_draft": "Sakit apa kamu?"},
+        {"n": 2, "speaker": "Pasien (anak)", "ar": "عِنْدِي سُعَالٌ", "id_draft": "Saya batuk."},
+        {"n": 3, "speaker": "Dokter", "ar": "إِذَنْ، سَأُعَالِجُكَ", "id_draft": "Kalau begitu, saya akan mengobatimu."},
+        {"n": 4, "speaker": "Dokter", "ar": "لَا بَأْسَ، هٰذِهِ هِيَ الْوَصْفَةُ", "id_draft": "Tidak apa-apa, ini resepnya."},
+        {"n": 5, "speaker": "Ibu pasien", "ar": "شُكْرًا", "id_draft": "Terima kasih.", "verify": true},
+        {"n": 6, "speaker": "Ibu pasien", "ar": "هٰذِهِ هِيَ الْوَصْفَةُ", "id_draft": "Ini resepnya."},
+        {"n": 7, "speaker": "Apoteker", "ar": "هٰذَا هُوَ الدَّوَاءُ، شَفَاكَ اللّٰهُ", "id_draft": "Ini obatnya, semoga kamu (lk) lekas sembuh."},
+        {"n": 8, "speaker": "Pasien (anak)", "ar": "آمِينْ، شُكْرًا", "id_draft": "Amin, terima kasih.", "verify": true}
+      ]
+    }
+  ],
+  "patterns": [
+    {"id": "b3-p01", "q_ar": "مَاذَا أَصَابَكَ؟", "q_id": "Sakit apa kamu (lk)?", "answers": [
+      {"ar": "عِنْدِي صُدَاعٌ", "id_text": "Saya sakit kepala", "vocab": "b3-v02"},
+      {"ar": "عِنْدِي زُكَامٌ", "id_text": "Saya flu", "vocab": "b3-v04"}], "page": 71},
+    {"id": "b3-p02", "q_ar": "مَاذَا أَصَابَكِ؟", "q_id": "Sakit apa kamu (pr)?", "answers": [
+      {"ar": "عِنْدِي سُعَالٌ", "id_text": "Saya batuk", "vocab": "b3-v03"},
+      {"ar": "عِنْدِي أَلَمٌ فِي ....", "id_text": "Saya merasa sakit di ....", "vocab": null}], "page": 72},
+    {"id": "b3-p03", "q_ar": "مَاذَا أَصَابَهُ؟", "q_id": "Sakit apa dia (lk)?", "answers": [
+      {"ar": "عِنْدَهُ إِسْهَالٌ", "id_text": "Dia diare", "vocab": "b3-v01"},
+      {"ar": "عِنْدَهُ حُمَّى", "id_text": "Dia demam", "vocab": "b3-v05"},
+      {"ar": "عِنْدَهُ سُعَالٌ", "id_text": "Dia batuk", "vocab": "b3-v03"}], "page": 72},
+    {"id": "b3-p04", "q_ar": "مَاذَا أَصَابَهَا؟", "q_id": "Sakit apa dia (pr)?", "answers": [
+      {"ar": "عِنْدَهَا صُدَاعٌ", "id_text": "Dia sakit kepala", "vocab": "b3-v02"},
+      {"ar": "عِنْدَهَا أَلَمُ الْأَسْنَانِ", "id_text": "Dia sakit gigi", "vocab": "b3-v07"},
+      {"ar": "عِنْدَهَا الْتِهَابُ الْعَيْنَيْنِ", "id_text": "Dia sakit mata", "vocab": "b3-v08"}], "page": 72},
+    {"id": "b3-p05", "type": "doa", "items": [
+      {"ar": "شَفَاكَ اللّٰهُ", "id_text": "Semoga kamu (laki-laki) lekas sembuh"},
+      {"ar": "شَفَاكِ اللّٰهُ", "id_text": "Semoga kamu (perempuan) lekas sembuh"},
+      {"ar": "شَفَاهُ اللّٰهُ", "id_text": "Semoga dia (laki-laki) lekas sembuh"},
+      {"ar": "شَفَاهَا اللّٰهُ", "id_text": "Semoga dia (perempuan) lekas sembuh"}], "page": 72}
+  ],
+  "grammar": {
+    "isim_alam": {
+      "definition_id": "Isim alam adalah isim yang menunjukkan makna untuk nama orang, kota, negara, dan lain-lain.",
+      "page": 70,
+      "examples": [
+        {"id_text": "Bandung", "ar": "بَانْدُونْج", "verify": true},
+        {"id_text": "Saudi Arabia", "ar": "السُّعُودُ الْعَرَبِيَّةُ", "verify": true, "note": "Tercetak demikian pada scan; bentuk lazim السُّعُودِيَّةُ. Konfirmasi guru sebelum dipakai di game."},
+        {"id_text": "Khalid", "ar": "خَالِدٌ"},
+        {"id_text": "Laila", "ar": "لَيْلَى"}
+      ]
+    },
+    "dhamir_muttashil": {
+      "note": "Tabel identik dengan Bab 2 hlm 45-46; lihat bab2-hewan.json grammar.dhamir_muttashil. Dirujuk, tidak diduplikasi.",
+      "pages": [71]
+    }
+  },
+  "text_reading": {
+    "id": "b3-rd01",
+    "title_ar": "الْأَمْرَاضُ",
+    "page": 69,
+    "instruction_id": "Bacalah teks berikut ini dengan benar!",
+    "lines": [
+      "هٰذَا إِلْيَاسُ، هُوَ تِلْمِيذٌ.",
+      "هُوَ الْآنَ فِي بَيْتِهِ، هُوَ غَائِبٌ عَنِ الْمَدْرَسَةِ.",
+      "هُوَ مَرِيضٌ، عِنْدَهُ إِسْهَالٌ.",
+      "شَفَاهُ اللّٰهُ.",
+      "هٰذِهِ لَيْلَى، هِيَ تِلْمِيذَةٌ.",
+      "هِيَ الْآنَ فِي بَيْتِهَا، هِيَ غَائِبَةٌ عَنِ الْمَدْرَسَةِ",
+      "هِيَ مَرِيضَةٌ عِنْدَهَا سُعَالٌ",
+      "شَفَاهَا اللّٰهُ."
+    ],
+    "note": "Tanda baca pada baris 6-7 sebagaimana tercetak (tanpa titik/koma)."
+  },
+  "exercises": [
+    {"id": "b3-ex01", "type": "listen_tick", "page": 64, "audio": "QR code 'Dengarkan' (audio TIDAK tersedia di PDF)", "items": [
+      {"n": 1, "pictures": ["b3-v02", "b3-v06", "b3-v07"]},
+      {"n": 2, "pictures": ["b3-v01", "b3-v02", "b3-v04"]},
+      {"n": 3, "pictures": ["b3-v02", "b3-v03", "b3-v08"]},
+      {"n": 4, "pictures": ["b3-v04", "b3-v02", "b3-v07"]},
+      {"n": 5, "pictures": ["b3-v09", "b3-v11", "b3-v13"]}
+    ], "note": "Kunci/naskah audio tidak ada di buku. Tiap gambar dipetakan ke kosakata sesuai ilustrasi."},
+    {"id": "b3-ex02", "type": "complete_dialogue", "pages": [65, 66], "note": "Jawaban DITURUNKAN dari dialog B (bukan kunci buku).", "blanks": [
+      {"n": 2, "ar_template": "عِنْدِي ....", "answer_derived": "سُعَالٌ"},
+      {"n": 3, "ar_template": "إِذَنْ، ....", "answer_derived": "سَأُعَالِجُكَ"},
+      {"n": 4, "ar_template": "لَا بَأْسَ، ... هِيَ الْوَصْفَةُ", "answer_derived": "هٰذِهِ"},
+      {"n": 6, "ar_template": "هٰذِهِ هِيَ ....", "answer_derived": "الْوَصْفَةُ"},
+      {"n": 7, "ar_template": "هٰذَا هُوَ ... ، شَفَاكَ اللّٰهُ", "answer_derived": "الدَّوَاءُ"},
+      {"n": 8, "ar_template": "....", "answer_derived": "آمِينْ، شُكْرًا"}
+    ]},
+    {"id": "b3-ex03", "type": "match_meaning", "pages": [66, 67], "note": "Pasangan DITURUNKAN dari kosakata hlm 56-58 (buku tidak menyertakan kunci).", "pairs_derived": [
+      {"ar_vocab": "b3-v08", "id_text": "Sakit mata", "letter": "b"},
+      {"ar_vocab": "b3-v05", "id_text": "Demam", "letter": "d"},
+      {"ar_vocab": "b3-v06", "id_text": "Sakit perut", "letter": "a"},
+      {"ar_vocab": "b3-v07", "id_text": "Sakit gigi", "letter": "e"},
+      {"ar_vocab": "b3-v02", "id_text": "Sakit kepala", "letter": "c"},
+      {"ar_vocab": "b3-v14", "id_text": "Apotik", "letter": "h"},
+      {"ar_vocab": "b3-v09", "id_text": "Resep", "letter": "j"},
+      {"ar_vocab": "b3-v10", "id_text": "Obat", "letter": "f"},
+      {"ar_vocab": "b3-v13", "id_text": "Rumah sakit", "letter": "i"},
+      {"ar_vocab": "b3-v11", "id_text": "Dokter", "letter": "g"}
+    ]},
+    {"id": "b3-ex04", "type": "write_copy", "pages": [67, 68], "words": ["b3-v12", "b3-v11", "b3-v03", "b3-v14", "b3-v09"]},
+    {"id": "b3-ex05", "type": "arrange_letters", "page": 68, "note": "Urutan huruf tercetak perlu dicek ulang; target kata jelas.", "items": [
+      {"n": 1, "target_vocab": "b3-v13"},
+      {"n": 2, "target_vocab": "b3-v02"},
+      {"n": 3, "target_vocab": "b3-v01"},
+      {"n": 4, "target_vocab": "b3-v04"},
+      {"n": 5, "target_vocab": "b3-v11", "target_form": "طَبِيبَةٌ"}
+    ], "verify": true},
+    {"id": "b3-ex06", "type": "dictation_imla", "page": 68, "teacher_note": "Guru membacakan teks singkat kemudian meminta murid menuliskannya kembali di buku catatan masing-masing.", "title_ar": "الْأَمْرَاضُ", "lines": [
+      "حَمِيدَةُ مَرِيضَةٌ، عِنْدَهَا حُمَّى.",
+      "خَالِدٌ مَرِيضٌ، عِنْدَهُ سُعَالٌ.",
+      "هُمَا يَشْرَبَانِ الدَّوَاءَ."
+    ]},
+    {"id": "b3-ex07", "type": "reading_questions", "page": 70, "note": "Jawaban DITURUNKAN dari teks b3-rd01 (bukan kunci buku).", "items": [
+      {"n": 1, "ar": "هَلْ إِلْيَاسُ غَائِبٌ عَنِ الْمَدْرَسَةِ؟", "answer_derived": "نَعَمْ"},
+      {"n": 2, "ar": "مَاذَا أَصَابَ إِلْيَاسُ؟", "answer_derived": "عِنْدَهُ إِسْهَالٌ", "verify": true, "note": "Tercetak إِلْيَاسُ (dhammah); bentuk objek lazim إِلْيَاسَ."},
+      {"n": 3, "ar": "هَلْ لَيْلَى غَائِبَةٌ عَنِ الْمَدْرَسَةِ؟", "answer_derived": "نَعَمْ"},
+      {"n": 4, "ar": "مَاذَا أَصَابَ لَيْلَى؟", "answer_derived": "عِنْدَهَا سُعَالٌ"},
+      {"n": 5, "ar": "أَيْنَ إِلْيَاسُ؟", "answer_derived": "هُوَ فِي بَيْتِهِ"}
+    ]},
+    {"id": "b3-ex08", "type": "pattern_drill_A", "page": 73, "instruction_id": "Kerjakan seperti contoh!", "example": {"cue": "صُدَاعٌ", "q": "مَاذَا أَصَابَكَ؟", "a": "عِنْدِي صُدَاعٌ"}, "cues": ["سُعَالٌ", "زُكَامٌ", "إِسْهَالٌ", "حُمَّى", "أَلَمُ الْأَسْنَانِ"]},
+    {"id": "b3-ex09", "type": "pattern_drill_B", "page": 73, "instruction_id": "Kerjakan seperti contoh!", "example": {"cue": "سُعَالٌ / صُدَاعٌ", "q": "هَلْ عِنْدَكَ سُعَالٌ؟", "a": "لَا، عِنْدِي صُدَاعٌ"}, "cues": ["سُعَالٌ / زُكَامٌ", "زُكَامٌ / إِسْهَالٌ"], "note": "Halaman setelah 73 tidak ada di PDF; mungkin ada soal lanjutan."}
+  ],
+  "image_inventory": {
+    "note": "Gambar buku adalah referensi saja; game memakai ilustrasi ORIGINAL (lihat ASSET_REQUIREMENTS.md). Jangan menyalin gambar buku.",
+    "vocab_pictures": "b3-v01..b3-v14 masing-masing satu gambar (hlm 56-58)",
+    "dialogue_scenes": "kelas (hlm 61-62), ruang dokter (hlm 62-63), apotek (hlm 63), ruang tunggu (hlm 60)",
+    "sentence_pictures_p59_60": "عِنْدِي + 6 penyakit (hlm 59); عِنْدِي الْتِهَابُ الْعَيْنَيْنِ, عِنْدِي حُمَّى, عِنْدَهُ زُكَامٌ, عِنْدَهَا سُعَالٌ, هٰذِهِ صَيْدَلِيَّةٌ, هٰذَا مُسْتَشْفَى (hlm 60)"
+  },
+  "sentences_listen_repeat": [
+    {"id": "b3-sn01", "ar": "عِنْدِي إِسْهَالٌ", "vocab": ["b3-v01"], "page": 59},
+    {"id": "b3-sn02", "ar": "عِنْدِي صُدَاعٌ", "vocab": ["b3-v02"], "page": 59},
+    {"id": "b3-sn03", "ar": "عِنْدِي زُكَامٌ", "vocab": ["b3-v04"], "page": 59},
+    {"id": "b3-sn04", "ar": "عِنْدِي سُعَالٌ", "vocab": ["b3-v03"], "page": 59},
+    {"id": "b3-sn05", "ar": "عِنْدِي أَلَمٌ فِي الْمَعِدَةِ", "vocab": ["b3-v06"], "page": 59},
+    {"id": "b3-sn06", "ar": "عِنْدِي أَلَمُ الْأَسْنَانِ", "vocab": ["b3-v07"], "page": 59},
+    {"id": "b3-sn07", "ar": "عِنْدِي الْتِهَابُ الْعَيْنَيْنِ", "vocab": ["b3-v08"], "page": 60},
+    {"id": "b3-sn08", "ar": "عِنْدِي حُمَّى", "vocab": ["b3-v05"], "page": 60},
+    {"id": "b3-sn09", "ar": "عِنْدَهُ زُكَامٌ", "vocab": ["b3-v04"], "page": 60},
+    {"id": "b3-sn10", "ar": "عِنْدَهَا سُعَالٌ", "vocab": ["b3-v03"], "page": 60},
+    {"id": "b3-sn11", "ar": "هٰذِهِ صَيْدَلِيَّةٌ", "vocab": ["b3-v14"], "page": 60},
+    {"id": "b3-sn12", "ar": "هٰذَا مُسْتَشْفَى", "vocab": ["b3-v13"], "page": 60}
+  ]
+}
