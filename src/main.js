@@ -1,9 +1,12 @@
-// Titik masuk: loading → menu → buat karakter → game. Satu fase = Foundation (PHASE 1).
+// Titik masuk: loading → menu → buat karakter → game. PHASE 1 Foundation; PHASE 2 menambah dunia
+// "Animal Kingdom" yang dibuka lewat alamat dengan ?world=animal (tambahkan &debug=1 untuk FPS/draw call).
 
 import { APP_VERSION, PRELOAD_IMAGES, SHIRT_COLORS, asset } from './core/config.js';
 import { load, save } from './core/storage.js';
 import { QUALITY_LEVELS, detectDefaultQuality, isValidQuality } from './core/quality.js';
 import { $, showScreen, toast, hideToast, setupQualitySegments, buildSwatches, toggleFullscreen } from './ui/ui.js';
+
+const WORLD_ID = new URLSearchParams(location.search).get('world') === 'animal' ? 'animal' : 'starter';
 
 const state = {
   profile: load('profile', null), // {name, gender, color}
@@ -114,6 +117,7 @@ async function startGame() {
       profile: state.profile,
       quality: state.settings.quality,
       antialias: state.settings.quality !== 'low',
+      worldId: WORLD_ID,
       callbacks: {
         onStars: (n, total) => ($('hud-stars').textContent = `${n}/${total}`),
         onToast: (msg) => toast(msg),
@@ -151,7 +155,9 @@ function startFpsMeter() {
   if (!debug) return;
   fpsTimer = setInterval(() => {
     const g = state.game;
-    if (g) el.textContent = `${g.stats.fps} FPS · ${g.quality}`;
+    if (!g) return;
+    const r = g.renderer.info.render;
+    el.textContent = `${g.stats.fps} FPS · ${g.quality} · ${r.calls} dc · ${Math.round(r.triangles / 1000)}k tri`;
   }, 500);
 }
 
@@ -185,7 +191,8 @@ function leaveGame() {
 
 // ---------------------------------------------------------------- boot
 function wire() {
-  $('version').textContent = `v${APP_VERSION} · PHASE 1 Foundation`;
+  $('version').textContent =
+    WORLD_ID === 'animal' ? `v${APP_VERSION} · PHASE 2 Animal Kingdom (uji)` : `v${APP_VERSION} · PHASE 1 Foundation`;
 
   // menu
   $('m-play').addEventListener('click', () => (state.profile ? startGame() : openCreate()));

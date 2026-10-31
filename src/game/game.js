@@ -1,15 +1,18 @@
-// Inti permainan PHASE 1: renderer, scene, pemain, kamera orang ketiga, interaksi, bintang.
+// Inti permainan: renderer, scene, pemain, kamera orang ketiga, interaksi, bintang.
+// PHASE 1: dunia "starter" (Lembah Awal). PHASE 2: dunia "animal" (Animal Kingdom), dipilih lewat opsi worldId.
 
 import * as THREE from 'three';
 import { PLAYER, WORLD_RADIUS } from '../core/config.js';
-import { heightAt } from '../core/terrain.js';
+import { heightAt as starterHeightAt } from '../core/terrain.js';
 import { resolveColliders, clampToWorld } from '../core/collision.js';
 import { moveDirection, lerpAngle } from '../core/movement.js';
 import { Input } from '../core/input.js';
 import { QUALITY_PRESETS, pixelRatioFor } from '../core/quality.js';
+import { checkBudget } from '../core/budget.js';
 import { load, save } from '../core/storage.js';
 import { createHero } from '../characters/hero.js';
-import { buildStarterArea, SPAWN } from '../worlds/starter-area.js';
+import { buildStarterArea, SPAWN as STARTER_SPAWN } from '../worlds/starter-area.js';
+import { buildAnimalKingdom } from '../worlds/animal-kingdom.js';
 import { CAMERA, clampPitch, cameraOffset } from './camera-rig.js';
 
 const STARS_KEY = 'p1.stars';
@@ -17,10 +20,10 @@ const STARS_KEY = 'p1.stars';
 export class Game {
   /**
    * @param {{stage:HTMLElement, controls:object, profile:{gender:string,color:string,name:string},
-   *          quality:string, antialias:boolean,
+   *          quality:string, antialias:boolean, worldId?:'starter'|'animal',
    *          callbacks:{onStars:Function,onToast:Function,onPrompt:Function,onAutoPause:Function,onEscape:Function}}} opts
    */
-  constructor({ stage, controls, profile, quality, antialias, callbacks }) {
+  constructor({ stage, controls, profile, quality, antialias, worldId = 'starter', callbacks }) {
     this.stage = stage;
     this.cb = callbacks;
     this.profile = profile;
@@ -32,6 +35,7 @@ export class Game {
     this._fpsAcc = 0;
     this._fpsFrames = 0;
     this._lastPrompt = null;
+    this._zoneId = undefined;
 
     // --- renderer ---
     this.renderer = new THREE.WebGLRenderer({ antialias, powerPreference: 'high-performance' });
@@ -62,15 +66,21 @@ export class Game {
     this.scene.add(this.sun, this.sun.target);
 
     // --- dunia ---
-    const collected = load(STARS_KEY, []);
-    this.world = buildStarterArea({ collectedIds: Array.isArray(collected) ? collected : [] });
+    this.worldId = worldId === 'animal' ? 'animal' : 'starter';
+    this.starsKey = this.worldId === 'animal' ? 'p2.animal.stars' : STARS_KEY;
+    const collected = load(this.starsKey, []);
+    const collectedIds = Array.isArray(collected) ? collected : [];
+    this.world = this.worldId === 'animal' ? buildAnimalKingdom({ collectedIds }) : buildStarterArea({ collectedIds });
+    this.heightAt = this.world.heightAt || starterHeightAt;
+    this.worldRadius = this.world.radius || WORLD_RADIUS;
+    const spawn = this.world.spawn || STARTER_SPAWN;
     this.scene.add(this.world.group);
 
     // --- pemain ---
     this.hero = createHero({ gender: profile.gender, color: profile.color });
     this.blob = this.hero.group.getObjectByName('blob-shadow');
     this.scene.add(this.hero.group);
-    this.pos = new THREE.Vector3(SPAWN.x, heightAt(SPAWN.x, SPAWN.z), SPAWN.z);
+    this.pos = new THREE.Vector3(spawn.x, this.heightAt(spawn.x, spawn.z), spawn.z);
     this.vel = { x: 0, z: 0 };
     this.vy = 0;
     this.grounded = true;
@@ -81,6 +91,7 @@ export class Game {
     // --- kamera ---
     this.yaw = 0;
     this.pitch = CAMERA.startPitch;
+    this._dt = 1 / 60;
     this._placeCamera(true);
 
     // --- input ---
@@ -161,7 +172,7 @@ export class Game {
     };
     const off = cameraOffset(this.yaw, this.pitch);
     const desired = new THREE.Vector3(target.x + off.x, target.y + off.y, target.z + off.z);
-    const minY = heightAt(desired.x, desired.z) + CAMERA.minAboveGround;
+    const minY = this.heightAt(desired.x, desired.z) + CAMERA.minAboveGround;
     if (desired.y < minY) desired.y = minY;
     if (snap) this.camera.position.copy(desired);
     else this.camera.position.lerp(desired, 1 - Math.exp(-14 * this._dt));
@@ -219,11 +230,11 @@ export class Game {
     this.pos.x += this.vel.x * dt;
     this.pos.z += this.vel.z * dt;
     resolveColliders(this.pos, PLAYER.radius, this.world.colliders);
-    clampToWorld(this.pos, PLAYER.radius, WORLD_RADIUS);
+    clampToWorld(this.pos, PLAYER.radius, this.worldRadius);
     this.hSpeed = Math.hypot(this.vel.x, this.vel.z);
 
     // vertikal
-    const ground = heightAt(this.pos.x, this.pos.z);
+    const ground = this.heightAt(this.pos.x, this.pos.z);
     if (this.grounded) {
       this.coyote = PLAYER.coyote;
       // menempel ke lereng turun yang landai
@@ -262,9 +273,21 @@ export class Game {
     this.sun.position.set(this.pos.x + 26, this.pos.y + 40, this.pos.z + 18);
 
     this.world.update(dt, this.time);
+    this._trackZone();
     this._collectStars();
     this._handleInteraction(input.consumeInteract());
     this._placeCamera(false);
+  }
+
+  /** Beri sapaan saat pemain masuk wilayah baru (hanya dunia yang punya zoneAt). */
+  _trackZone() {
+    if (!this.world.zoneAt) return;
+    const zone = this.world.zoneAt(this.pos.x, this.pos.z);
+    const id = zone ? zone.id : null;
+    if (id !== this._zoneId) {
+      this._zoneId = id;
+      if (zone) this.cb.onToast?.(zone.welcome);
+    }
   }
 
   _collectStars() {
@@ -282,7 +305,7 @@ export class Game {
     }
     if (changed) {
       const ids = this.world.stars.filter((s) => s.collected).map((s) => s.id);
-      save(STARS_KEY, ids);
+      save(this.starsKey, ids);
       const n = ids.length;
       const total = this.world.stars.length;
       this.cb.onStars?.(n, total);
@@ -308,6 +331,13 @@ export class Game {
     if (pressed && near) this.cb.onToast?.(near.message);
   }
 
+  /** Beban render frame terakhir (draw call, segitiga) dibanding anggaran PHASE 2. */
+  renderInfo() {
+    const r = this.renderer.info.render;
+    const info = { calls: r.calls, triangles: r.triangles, geometries: this.renderer.info.memory.geometries };
+    return { ...info, budget: checkBudget(info, this.quality) };
+  }
+
   /** Untuk uji manual / otomatis di browser. */
   debugState() {
     return {
@@ -318,6 +348,9 @@ export class Game {
       fps: this.stats.fps,
       frames: this.stats.frames,
       quality: this.quality,
+      world: this.worldId,
+      zone: this._zoneId ?? null,
+      render: this.renderInfo(),
       stars: this.starsCollected(),
       paused: this.paused,
     };
