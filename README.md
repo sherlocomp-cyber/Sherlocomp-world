@@ -10,8 +10,20 @@ Perangkat utama uji: Xiaomi Pad 7 Pro yang disambung ke monitor 30 inci di papan
 
 ## Status
 
-**PHASE 0 — Project Discovery: dokumen dan database materi selesai, menunggu persetujuan pengguna.**
-Belum ada kode game. Lihat `HANDOFF.md` untuk status rinci.
+**PHASE 0 selesai dan disetujui. PHASE 1 (Foundation): kode sudah ditulis, tetapi BELUM diuji di browser** (uji Node 28/28 lulus; `npm install`/build/run belum pernah dijalankan). Lihat `HANDOFF.md` dan `TEST_REPORT.md`.
+
+## Menjalankan (butuh Node 20+)
+
+```bash
+git checkout develop && git pull
+npm install                 # lalu commit package-lock.json
+npm run test:smoke          # uji Node (logika + konsistensi), bukan uji WebGL
+npm run dev                 # buka http://localhost:5173/?debug=1  (?debug=1 = tampilkan FPS)
+npm run build && npm run preview
+```
+
+Kontrol: WASD gerak · Spasi lompat · Shift lari · E aksi · geser mouse/jari putar kamera · Esc jeda.
+Di HP/tablet: joystick kiri, tombol Lompat/Lari/Aksi kanan.
 
 ## Peta dokumen
 
@@ -28,6 +40,7 @@ Belum ada kode game. Lihat `HANDOFF.md` untuk status rinci.
 | `CHANGELOG.md` | Riwayat perubahan |
 | `TEST_REPORT.md` | Laporan pengujian nyata |
 | `src/data/lessons/` | Database materi terpusat (JSON) |
+| `src/` `index.html` `tests/` | Kode game PHASE 1 (Vite + Three.js) dan uji Node |
 
 ## Catatan
 

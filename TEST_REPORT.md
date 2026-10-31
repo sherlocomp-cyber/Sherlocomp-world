@@ -66,3 +66,78 @@ Masukan: 3 ZIP (hewan+kesehatan 25, tekstur+langit 12, ikon+lencana+cerita 31) =
 ### Bug diketahui
 
 Tidak ada kode, jadi tidak ada bug perangkat lunak. Masalah materi tercatat di `MATERIAL_INDEX.md`.
+
+## Sesi 3 — PHASE 1 Foundation (2026-10-31)
+
+**Ringkasan jujur:** kode PHASE 1 sudah ditulis, tetapi **belum pernah dijalankan di browser** oleh Claude. Alasan: di sandbox sesi ini registry npm dijawab **HTTP 403 oleh kebijakan egress** (`registry.npmjs.org`; percobaan pertama gagal `ENOTFOUND` karena daftar `no_proxy`, percobaan kedua lewat proxy sandbox ditolak 403). Karena itu `npm install`, `vite build`, dan `vite dev` **tidak pernah berjalan**. Claude tidak mencari jalan memutar. Tidak ada `package-lock.json`.
+
+### Dijalankan dan lulus (Node, tanpa Three.js, tanpa browser)
+
+`node tests/smoke.mjs` → **28/28 lulus**. Cakupan:
+
+| Kelompok | Yang diperiksa |
+|---|---|
+| Sintaks | `node --check` pada seluruh `src/**/*.js`, `vite.config.js`, `tests/smoke.mjs` |
+| Konsistensi impor | setiap impor relatif menunjuk file yang ada; setiap paket yang diimpor terdaftar di `package.json`; `three` dipin persis |
+| HTML ↔ JS | semua `$('id')` di `main.js`/`ui.js` ada di `index.html`; kesepuluh id kontrol/HUD ada; kelima layar ada |
+| Aset | semua `/assets/...` di `index.html` dan `styles.css` ada di `public/`; `PRELOAD_IMAGES` ada di disk dan di `manifest.json` |
+| Materi | dua JSON pelajaran valid dan ID kosakata unik (teks buku tidak disentuh) |
+| Medan | titik awal, rumah, papan rata dan bukan air; kolam adalah air; tepi dunia menanjak; deterministik dan berhingga pada 1.681 titik |
+| Tata letak | 5 bintang di darat, di dalam dunia, tidak di dalam penghalang; titik awal tidak menempel penghalang; kolam selaras dengan `terrain.POND` |
+| Tabrakan | dorong keluar lingkaran; titik di pusat tidak NaN; dua rintangan berdekatan; batas dunia |
+| Gerak/kamera | maju = −Z pada yaw 0; arah mengikuti yaw; arah kamera→target selalu = arah maju (5 sudut); `lerpAngle` jalur terpendek; joystick (zona mati, maju, batas 1); pitch dijepit |
+| Grafis | tiga level, preset valid, `pixelRatioFor`, deteksi level awal |
+| Konfigurasi | 6 warna baju valid dan unik |
+
+**Uji negatif (membuktikan uji bisa gagal):** tiga perusakan sengaja, lalu dipulihkan → (1) id `btn-act` diganti di HTML: 2 uji gagal; (2) bintang dipindah ke kolam: 1 uji gagal; (3) salah ketik nama impor: 1 uji gagal. Setelah pemulihan 28/28 lulus.
+
+Pemeriksaan lain yang dijalankan:
+- `git ls-files | grep -c '^public/assets/images/'` = **108** (menutup tugas verifikasi jumlah aset).
+- `develop` di-fast-forward ke `main` (50bcc7f); riwayat bersih, tanpa konflik.
+- Potret `hero_boy_portrait` dan `hero_girl_portrait` dilihat langsung untuk menyesuaikan model prosedural.
+
+### TIDAK diuji (belum ada bukti — jangan dianggap jalan)
+
+- `npm install`, `npm run dev`, `npm run build`, `npm run preview`.
+- Render WebGL apa pun: apakah scene tampil, apakah pencahayaan terlalu terang/gelap (intensitas diperkirakan, bukan diukur), apakah warna vertex medan benar, apakah daun palem mengarah keluar, apakah bayangan benar.
+- Sentuh: joystick, tombol, geser kamera, mencegah zoom/gulir di Android.
+- FPS di perangkat mana pun (HP, Xiaomi Pad 7 Pro, laptop, PC). Anggaran poligon belum ditetapkan.
+- Sub-path GitHub Pages dan WebView Capacitor.
+- Perilaku `ResizeObserver`, layar penuh, auto-jeda saat tab disembunyikan.
+- Penyimpanan LocalStorage (profil, pengaturan, bintang) di browser nyata.
+- Kemampuan `three` 0.187.0 (API yang dipakai ditulis dari pengetahuan sebelum rilis itu; `three` tidak terpasang sehingga tidak ada pemeriksaan impor/API).
+
+### Tabel uji manual untuk pengguna (isi kolom "Hasil")
+
+Perintah (Node 20+; sandbox Claude memakai Node 22): `git pull origin develop`, `npm install`, `npm run test:smoke`, `npm run dev` lalu buka `http://localhost:5173/?debug=1` (`?debug=1` menampilkan FPS dan level grafis). Di HP/tablet satu Wi-Fi: alamat `http://<IP-komputer>:5173/?debug=1`.
+
+| # | Uji | Hasil yang diharapkan | Hasil |
+|---|---|---|---|
+| 1 | `npm install` | selesai tanpa galat; muncul `package-lock.json` (commit file ini) | BELUM DIUJI |
+| 2 | `npm run test:smoke` | 28/28 lulus | BELUM DIUJI |
+| 3 | `npm run dev`, buka halaman | bilah memuat sampai 100%, lalu menu berlatar hutan dengan logo | BELUM DIUJI |
+| 4 | Buat karakter: perempuan → nama → warna → Mulai | masuk game; HUD menampilkan nama dan 0/5 | BELUM DIUJI |
+| 5 | Tampilan dunia | langit biru, rumput, pohon, kolam, rumah; **tidak** layar hitam/putih; pencahayaan wajar | BELUM DIUJI |
+| 6 | Gerak WASD / joystick | W = menjauhi kamera; A/D benar; karakter menghadap arah jalan | BELUM DIUJI |
+| 7 | Putar kamera (geser mouse/jari, panah) | geser ke kanan → pandangan ke kanan; tidak terbalik; tidak tembus tanah | BELUM DIUJI |
+| 8 | Lompat (Spasi / tombol) | melompat ±1,6 m dan mendarat; tidak terbang | BELUM DIUJI |
+| 9 | Lari (Shift / tombol Lari) | lebih cepat dari jalan | BELUM DIUJI |
+| 10 | Tabrakan | tidak menembus pohon, batu, rumah, kolam, batas dunia | BELUM DIUJI |
+| 11 | Interaksi | dekat papan muncul "E · Baca papan"; E menampilkan pesan; dekat rumah: "Ketuk pintu" | BELUM DIUJI |
+| 12 | Bintang | 5 bintang berputar; terkumpul saat didekati; HUD naik; setelah muat ulang tetap terkumpul | BELUM DIUJI |
+| 13 | Jeda (Esc / tombol) | menu jeda muncul, game berhenti; Esc/Lanjutkan melanjutkan | BELUM DIUJI |
+| 14 | Grafis Rendah/Sedang/Tinggi (dari menu jeda) | berubah langsung: bayangan hanya di Sedang/Tinggi; gameplay sama | BELUM DIUJI |
+| 15 | Kembali ke Menu → Lanjutkan | masuk lagi dengan karakter yang sama | BELUM DIUJI |
+| 16 | HP/tablet: sentuh | joystick, tombol, geser kamera bekerja; layar tidak menggulir/memperbesar | BELUM DIUJI |
+| 17 | FPS (`?debug=1`): catat per perangkat dan level | angka nyata; target awal ≥30 FPS di Xiaomi Pad 7 Pro (belum ditetapkan resmi) | BELUM DIUJI |
+| 18 | `npm run build` lalu `npm run preview` | build sukses; game jalan dari `dist/` | BELUM DIUJI |
+| 19 | Sub-path: salin `dist/` ke `…/Sherlocomp-world/` dan layani | game jalan di sub-path (aset tidak 404) | BELUM DIUJI |
+| 20 | Layar penuh di monitor 30 inci | teks HUD dan menu terbaca dari belakang kelas | BELUM DIUJI |
+
+### Bug / risiko diketahui (dari tinjauan kode, belum terbukti)
+
+- Intensitas cahaya (`hemi 1.5`, `sun 2.0`) adalah perkiraan; mungkin terlalu terang atau gelap.
+- `antialias` tidak berubah saat ganti level di tengah sesi (D-029).
+- Kamera tidak menghindari pohon (bisa menembus dedaunan).
+- Daun palem disusun dengan rotasi manual; orientasi belum dilihat.
+- Versi `vite ^7` belum diverifikasi dan belum ada `package-lock.json` (D-026).
