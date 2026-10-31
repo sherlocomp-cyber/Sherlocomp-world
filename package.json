@@ -1,0 +1,19 @@
+{
+  "name": "arabia-world",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ARABIA WORLD: THE LOST KINGDOM — game edukasi 3D Bahasa Arab kelas 3 MI",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test:smoke": "node tests/smoke.mjs"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#1c5a45" />
+    <title>Arabia World: The Lost Kingdom</title>
+    <link rel="icon" href="/assets/images/brand/app_icon.png" />
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Kanvas 3D -->
+      <div id="stage" aria-hidden="true"></div>
+
+      <!-- HUD + kontrol (tampil hanya saat bermain) -->
+      <div id="hud" hidden>
+        <div class="hud-chip" id="hud-player">
+          <span id="hud-name">Pemain</span>
+          <span class="hud-sep"></span>
+          <img src="/assets/images/ui/icon_star.webp" alt="" class="hud-icon" />
+          <span id="hud-stars">0/5</span>
+        </div>
+        <div class="hud-right">
+          <span id="hud-fps" class="hud-chip small" hidden></span>
+          <button id="btn-pause" class="icon-btn" aria-label="Jeda">
+            <img src="/assets/images/ui/icon_pause.webp" alt="" />
+          </button>
+        </div>
+        <div id="prompt" class="prompt" hidden></div>
+
+        <div id="joy" class="joy" aria-label="Joystick gerak">
+          <div id="knob" class="knob"></div>
+        </div>
+        <div class="actions">
+          <button id="btn-act" class="act-btn act" aria-label="Aksi">Aksi</button>
+          <button id="btn-run" class="act-btn run" aria-pressed="false" aria-label="Lari">Lari</button>
+          <button id="btn-jump" class="act-btn jump" aria-label="Lompat">Lompat</button>
+        </div>
+        <div class="kbd-hint" id="kbd-hint">
+          WASD gerak · Spasi lompat · Shift lari · E aksi · Geser mouse putar kamera · Esc jeda
+        </div>
+      </div>
+
+      <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+      <!-- Layar -->
+      <section id="screen-loading" class="screen" data-screen="loading">
+        <img class="logo" src="/assets/images/brand/logo_mark.png" alt="Arabia World" />
+        <div class="bar"><div id="load-bar" class="bar-fill"></div></div>
+        <p id="load-text" class="muted">Memuat…</p>
+      </section>
+
+      <section id="screen-menu" class="screen bg" data-screen="menu" hidden>
+        <div class="panel center">
+          <img class="logo" src="/assets/images/brand/logo_mark.png" alt="Arabia World" />
+          <h1>Arabia World</h1>
+          <p class="subtitle">The Lost Kingdom</p>
+          <button id="m-play" class="btn primary big">Mulai Petualangan</button>
+          <button id="m-new" class="btn" hidden>Buat Karakter Baru</button>
+          <button id="m-settings" class="btn">Pengaturan</button>
+          <button id="m-full" class="btn ghost">Layar Penuh</button>
+          <p class="version muted" id="version"></p>
+        </div>
+      </section>
+
+      <section id="screen-create" class="screen bg" data-screen="create" hidden>
+        <div class="panel wide">
+          <h2>Buat Karaktermu</h2>
+          <div class="cards" role="radiogroup" aria-label="Pilih karakter">
+            <button class="char-card" data-gender="boy" role="radio" aria-checked="true">
+              <img src="/assets/images/characters/hero_boy_portrait.webp" alt="" />
+              <span>Laki-laki</span>
+            </button>
+            <button class="char-card" data-gender="girl" role="radio" aria-checked="false">
+              <img src="/assets/images/characters/hero_girl_portrait.webp" alt="" />
+              <span>Perempuan</span>
+            </button>
+          </div>
+          <label class="field">
+            <span>Namamu</span>
+            <input id="c-name" type="text" maxlength="12" autocomplete="off" placeholder="Tulis namamu" />
+          </label>
+          <div class="field">
+            <span>Warna bajumu</span>
+            <div id="c-colors" class="swatches" role="radiogroup" aria-label="Warna baju"></div>
+          </div>
+          <div class="row">
+            <button id="c-back" class="btn">Kembali</button>
+            <button id="c-go" class="btn primary">Mulai Bermain</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-settings" class="screen bg" data-screen="settings" hidden>
+        <div class="panel">
+          <h2>Pengaturan</h2>
+          <div class="field">
+            <span>Kualitas grafis</span>
+            <div class="seg" data-seg="quality"></div>
+            <p class="muted small">Rendah = paling ringan untuk perangkat lama. Permainannya sama di semua pilihan.</p>
+          </div>
+          <button id="s-back" class="btn primary">Selesai</button>
+        </div>
+      </section>
+
+      <section id="screen-pause" class="screen dim" data-screen="pause" hidden>
+        <div class="panel">
+          <h2>Jeda</h2>
+          <button id="p-resume" class="btn primary big">Lanjutkan</button>
+          <div class="field">
+            <span>Kualitas grafis</span>
+            <div class="seg" data-seg="quality"></div>
+          </div>
+          <button id="p-full" class="btn">Layar Penuh</button>
+          <button id="p-menu" class="btn danger">Kembali ke Menu</button>
+        </div>
+      </section>
+
+      <section id="screen-error" class="screen dim" data-screen="error" hidden>
+        <div class="panel">
+          <h2>Maaf, game tidak dapat dimulai</h2>
+          <p id="error-text" class="muted"></p>
+          <button id="e-back" class="btn primary">Kembali</button>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
