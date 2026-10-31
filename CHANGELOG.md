@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 2026-10-31 — PHASE 1 dijalankan pengguna di PC (laporan lisan "aman")
+
+### Ditambahkan
+- `package-lock.json` (commit 7d626f0 di `develop`): three 0.187.0, vite 7.3.7. Dibuat oleh `npm install` di PC Windows pengguna.
+
+### Diubah
+- `HANDOFF.md`, `TASKS.md`, `CHANGELOG.md`, `NEXT_SESSION_PROMPT.md`: PHASE 1 ditandai selesai berdasarkan laporan lisan pengguna.
+
+### Diketahui
+- Tabel 20 uji di `TEST_REPORT.md` sengaja tidak diisi (keputusan pengguna). Satu-satunya bukti uji browser adalah laporan lisan "aman".
+- Tidak dilaporkan/belum diuji: FPS, layar sentuh, Xiaomi Pad 7 Pro, `npm run test:smoke` dan `npm run build` di PC.
+
+## 2026-10-31 — PHASE 1 Foundation: kode ditulis (sesi 3) — BELUM DIUJI DI BROWSER
+
+### Ditambahkan
+- Proyek Vite + Three.js: `package.json` (three 0.187.0), `vite.config.js` (base `./`), `index.html`, `.gitignore`.
+- `src/main.js` (loading → menu → buat karakter → game, pengaturan, jeda, layar galat WebGL).
+- `src/ui/ui.js`, `src/ui/styles.css` (ukuran mengikuti layar agar terbaca di monitor besar; kontrol sentuh).
+- `src/core/`: `config`, `storage`, `quality`, `terrain`, `collision`, `movement`, `input`.
+- `src/game/`: `game` (renderer, loop, pemain, kamera, interaksi, bintang), `camera-rig`.
+- `src/characters/hero.js` (pemain prosedural laki-laki/perempuan berhijab).
+- `src/worlds/`: `layout` (tata letak murni), `starter-area` ("Lembah Awal").
+- `tests/smoke.mjs` (`npm run test:smoke`): 28 uji Node.
+- Keputusan D-026 s/d D-031.
+
+### Diubah
+- `TASKS.md`, `DECISIONS.md`, `CHANGELOG.md`, `TEST_REPORT.md`, `README.md`, `HANDOFF.md`, `NEXT_SESSION_PROMPT.md`.
+- `develop` di-fast-forward ke `main` (50bcc7f) lebih dulu: pembaruan dokumen sesi 2 lewat `put_file` ternyata masuk `main`.
+
+### Tidak diubah (sesuai aturan)
+- `src/data/lessons/*.json` dan seluruh ID kosakata; aset di `public/assets/`.
+
+### Diketahui
+- `npm install`, `vite build`, dan menjalankan di browser **belum pernah berhasil dijalankan Claude** (registry npm 403 di sandbox). Tidak ada `package-lock.json` (kemudian dibuat pengguna di PC, lihat entri di atas).
+
 ## 2026-10-31 — Intake aset Flow kedua (sesi 2): PHASE 0 dilengkapi
 
 ### Ditambahkan
