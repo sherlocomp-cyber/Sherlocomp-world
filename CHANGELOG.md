@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-10-31 — Intake aset Flow (sesi 1, lanjutan)
+
+### Ditambahkan
+- 40 ilustrasi di `public/assets/images/` (brand, characters, accessories, npcs, pets, animals) + `public/assets/manifest.json`.
+- Keputusan D-018 s/d D-025 di `DECISIONS.md`.
+- Branch `develop`.
+
+### Diubah
+- `TASKS.md`, `HANDOFF.md`, `TEST_REPORT.md`, `DECISIONS.md` (T-01–T-05 selesai, status aset).
+
 ## 2026-10-31 — PHASE 0 (sesi 1)
 
 ### Ditambahkan

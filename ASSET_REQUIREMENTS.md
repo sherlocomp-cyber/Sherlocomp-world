@@ -125,3 +125,7 @@ OUTPUT: deliver every image as a separate PNG named exactly as in the file list 
 ## 7. Pekerjaan pengguna
 
 Jalankan master prompt di Google Flow, unduh semua PNG dengan nama persis seperti tabel, lalu unggah ke sesi Claude berikutnya. Boleh dikirim bertahap per batch (Batch 1–3 dahulu sudah cukup untuk PHASE 1–3).
+
+## 8. Status intake (2026-10-31)
+
+Diterima **40 dari 108**: Batch 1 (5), Batch 2 (4), Batch 3 (8), Batch 4 (11: 3 pet + 8 aksesori), dan 12 dari 23 kartu hewan di Batch 5. Hasil proses, nama file, ukuran, dan catatan ada di `public/assets/manifest.json` (bagian `missing` merinci 68 yang belum ada). Format akhir: lihat `DECISIONS.md` D-023 dan D-024. Nama file Flow otomatis dipetakan ke nama manifest secara manual dari tampilan gambar.

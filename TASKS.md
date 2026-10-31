@@ -12,17 +12,26 @@ Legenda: `[x]` selesai dan terbukti · `[ ]` belum · `[~]` sebagian.
 - [x] Master prompt Google Flow (di `ASSET_REQUIREMENTS.md` bagian 6)
 - [x] File handoff (`HANDOFF.md`, `DECISIONS.md`, `CHANGELOG.md`, `TEST_REPORT.md`, `NEXT_SESSION_PROMPT.md`)
 - [~] Struktur folder: terdokumentasi di `PROJECT_SPEC.md` bagian 8; folder fisik dibuat saat PHASE 1 (Git tidak melacak folder kosong)
-- [ ] **Branch `develop`**: belum dibuat (alat repo yang dipakai sesi ini hanya dapat commit ke `main`). Buat saat sesi dengan akses git/CLI.
-- [ ] **Persetujuan pengguna atas hasil PHASE 0**
-- [ ] **Aset Google Flow dihasilkan pengguna dan diunggah** (minimal Batch 1–3 untuk PHASE 1–3)
+- [x] Branch `develop` dibuat dari `main` (D-025)
+- [ ] **Persetujuan eksplisit memulai PHASE 1** (pengguna sudah mengunggah aset dan mendelegasikan T-01–T-05; menunggu kata "mulai PHASE 1")
+- [x] Aset Google Flow Batch 1–4 diterima dan di-intake (40 dari 108; sisa 68)
 
-## Pertanyaan terbuka untuk pengguna (hanya yang benar-benar diperlukan)
+## Pertanyaan T-01 s/d T-05 — SELESAI (diputuskan 2026-10-31)
 
-- **T-01 Halaman hilang.** Mohon sediakan Bab 2 hlm 29 (pembuka bab), 43–44 (qira'ah + soal 1–2), dan Bab 3 hlm 74+ jika ada.
-- **T-02 Sumber audio.** PDF hanya berisi QR code, tanpa audio. Pilih: (a) rekaman suara guru/penutur asli, (b) suara sintetis (TTS) Arab, (c) kombinasi — TTS dulu, rekaman menyusul.
-- **T-03 Verifikasi materi.** Guru Bahasa Arab perlu memeriksa 47 entri `verify` (lihat `MATERIAL_INDEX.md` bagian 7), terutama arti kata `general_knowledge` dan terjemah dialog `draft_unverified`.
-- **T-04 App ID Android.** Usulan: `com.sherlocomp.arabiaworld`. Setuju atau ganti?
-- **T-05 Visibilitas repository.** Repo ini publik dan memuat teks buku. Tetap publik, atau dijadikan private (GitHub Pages dari repo private memerlukan paket GitHub berbayar)?
+Pengguna: "halaman hilang abaikan saja, T-01–T-05 ambil keputusan sendiri". Keputusan: lihat `DECISIONS.md` D-018 s/d D-022.
+
+- [x] T-01 Halaman hilang: diabaikan (D-018)
+- [x] T-02 Audio: file rekaman bila ada → Web Speech `ar-SA` → teks saja (D-019)
+- [x] T-03 Verifikasi materi: antrean verifikasi di Teacher Mode (D-020)
+- [x] T-04 App ID `com.sherlocomp.arabiaworld` (D-021)
+- [x] T-05 Repo tetap publik (D-022)
+
+## Aset Flow (intake sesi 1)
+
+- [x] 40 gambar diterima, diproses, dimasukkan ke `public/assets/images/` + `public/assets/manifest.json`
+- [ ] Belum ada (68): 11 kartu hewan (hirba, karkadann, qird, tuban, namir, timsah, baqarah, hamamah, samak, namlah, dajajah), 14 kartu kesehatan, 2 langit, 10 tekstur, 15 ikon UI, 10 lencana, 6 panel cerita
+- [ ] Disarankan dibuat ulang di Flow: `acc_headband` (terlihat seperti gelang hijau)
+- [ ] Konfirmasi pengguna: asumsi pasangan pet/animal (kelinci dan kura-kura) di `manifest.json`
 
 ## PHASE 1 — Foundation (belum dimulai; menunggu persetujuan PHASE 0)
 

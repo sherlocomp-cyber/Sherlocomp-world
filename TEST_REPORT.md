@@ -18,6 +18,19 @@ Hanya hasil yang benar-benar dijalankan yang dicatat di sini.
 
 Skrip validasi dijalankan dari luar folder proyek (tidak disimpan di repo).
 
+## Sesi 1 — intake aset Flow (2026-10-31)
+
+| Uji | Cara | Hasil |
+|---|---|---|
+| ZIP berisi 40 gambar; ukuran terbaca | Python PIL | Lulus — 40 file; 35 bergaya potongan (latar magenta), 5 opaque |
+| Latar magenta terhapus pada 35 potongan | Pemeriksaan visual lembar kontak di atas latar gelap | Lulus — tepi bersih, lubang di dalam syal terhapus, tidak ada sisa magenta yang terlihat pada ukuran lembar kontak |
+| Tidak ada teks dalam gambar | Pemeriksaan visual lembar kontak | Lulus pada 40 gambar yang diterima |
+| Manifest cocok dengan file | Skrip: file ada, ukuran piksel cocok, alpha ada, byte cocok, ID unik | Lulus — 40 aset, 0 masalah |
+| Rujukan `vocab_id` aset hewan valid | Skrip terhadap `bab2-hewan.json` | Lulus — 12 rujukan, 0 duplikat |
+| Berkas di atas 250 KB | Skrip | 5 berkas: 3 latar lebar (264–352 KB), `logo_mark.png` (816 KB), `app_icon.png` (1032 KB). Semua potongan di bawah 250 KB (maks ±100 KB) |
+
+Catatan kualitas: `acc_headband` tampak seperti gelang hijau, bukan ikat kepala (disarankan dibuat ulang). Pasangan pet/animal untuk kelinci dan kura-kura adalah **asumsi** (dari tampilan), belum dikonfirmasi pengguna. Pemeriksaan tepi dilakukan pada resolusi lembar kontak (200 px); pemeriksaan pada ukuran penuh belum dilakukan.
+
 ### Belum diuji / tidak dapat diuji sekarang
 
 - **Akurasi transkripsi Arab dan harakat**: ditranskripsi manual dari scan; **belum diperiksa penutur/guru Bahasa Arab**. 47 entri bertanda `verify`.
