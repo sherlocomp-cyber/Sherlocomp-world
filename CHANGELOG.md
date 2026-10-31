@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 2026-10-31 — PHASE 1 Foundation: kode ditulis (sesi 3) — BELUM DIUJI DI BROWSER
+
+### Ditambahkan
+- Proyek Vite + Three.js: `package.json` (three 0.187.0), `vite.config.js` (base `./`), `index.html`, `.gitignore`.
+- `src/main.js` (loading → menu → buat karakter → game, pengaturan, jeda, layar galat WebGL).
+- `src/ui/ui.js`, `src/ui/styles.css` (ukuran mengikuti layar agar terbaca di monitor besar; kontrol sentuh).
+- `src/core/`: `config`, `storage`, `quality`, `terrain`, `collision`, `movement`, `input`.
+- `src/game/`: `game` (renderer, loop, pemain, kamera, interaksi, bintang), `camera-rig`.
+- `src/characters/hero.js` (pemain prosedural laki-laki/perempuan berhijab).
+- `src/worlds/`: `layout` (tata letak murni), `starter-area` ("Lembah Awal").
+- `tests/smoke.mjs` (`npm run test:smoke`): 28 uji Node.
+- Keputusan D-026 s/d D-031.
+
+### Diubah
+- `TASKS.md`, `DECISIONS.md`, `CHANGELOG.md`, `TEST_REPORT.md`, `README.md`, `HANDOFF.md`, `NEXT_SESSION_PROMPT.md`.
+- `develop` di-fast-forward ke `main` (50bcc7f) lebih dulu: pembaruan dokumen sesi 2 lewat `put_file` ternyata masuk `main`.
+
+### Tidak diubah (sesuai aturan)
+- `src/data/lessons/*.json` dan seluruh ID kosakata; aset di `public/assets/`.
+
+### Diketahui
+- `npm install`, `vite build`, dan menjalankan di browser **belum pernah berhasil dijalankan Claude** (registry npm 403 di sandbox). Tidak ada `package-lock.json`.
+
 ## 2026-10-31 — Intake aset Flow kedua (sesi 2): PHASE 0 dilengkapi
 
 ### Ditambahkan
