@@ -1,6 +1,12 @@
 # HANDOFF
 
-Diperbarui: 2026-10-31 (PHASE 1 dijalankan pengguna di PC; selesai berdasarkan laporan lisan)
+Diperbarui: 2026-10-31 (sesi 5: PHASE 2 tahap A Animal Kingdom ada di `develop` dan dilaporkan "sudah bagus")
+
+## 0. Pembaruan sesi 5 (BACA DULU)
+- PHASE 2 tahap A (Animal Kingdom) sudah di `develop` (commit 4eb920c). Buka dengan `/?world=animal&debug=1`. Detail: `docs/PHASE2_TAHAP_A.md`.
+- Bukti: sandbox `test:smoke` 28/28, `test:phase2` 17/17, `npm run build` berhasil; pengguna melaporkan lisan "sudah bagus". FPS dan perangkat target BELUM diukur, jadi PHASE 2 BELUM selesai.
+- Berikutnya: (1) ukur FPS di Xiaomi Pad 7 Pro dkk, tetapkan ulang D-033; (2) persetujuan D-032; (3) tahap B Sickness Kingdom. Jangan menulis ulang kode yang ada.
+- Keputusan D-032 s/d D-036 sudah masuk `DECISIONS.md`. Bagian 3-16 di bawah masih berisi status akhir sesi 4 (PHASE 1).
 
 ## 1. Proyek
 ARABIA WORLD: THE LOST KINGDOM — game edukasi 3D Bahasa Arab kelas 3 MI (Bab 2 hewan, Bab 3 penyakit). Repo: `sherlocomp-cyber/Sherlocomp-world`.

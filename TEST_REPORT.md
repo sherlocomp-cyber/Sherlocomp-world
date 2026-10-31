@@ -141,3 +141,11 @@ Perintah (Node 20+; sandbox Claude memakai Node 22): `git pull origin develop`, 
 - Kamera tidak menghindari pohon (bisa menembus dedaunan).
 - Daun palem disusun dengan rotasi manual; orientasi belum dilihat.
 - Versi `vite ^7` belum diverifikasi dan belum ada `package-lock.json` (D-026).
+
+## Sesi 5 — PHASE 2 tahap A (2026-10-31)
+
+Sandbox (repo asli, `develop` 4eb920c): `npm install` berhasil; `npm run test:smoke` 28/28; `npm run test:phase2` 17/17; `npm run build` berhasil (vite 7.3.7; bundel game 598 kB, 156 kB gzip). Ini uji Node/build, bukan uji WebGL.
+
+Browser (pengguna): membuka `/?world=animal&debug=1`, dilaporkan "sudah bagus" (laporan lisan, tanpa rincian).
+
+BELUM DIUJI / JANGAN DIKLAIM: FPS, draw call, segitiga di HP/Xiaomi Pad 7 Pro/laptop; sentuhan; penyimpanan bintang setelah muat ulang; pencahayaan; kamera menembus bukit di tepi dunia.

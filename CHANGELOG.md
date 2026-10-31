@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-31 — PHASE 2 tahap A: Animal Kingdom (dilaporkan "sudah bagus")
+
+### Ditambahkan (commit 4eb920c, `develop`)
+- Dunia Animal Kingdom (radius 100): hub + 6 wilayah, jalan setapak, 6 bintang, pedestal 21 kosakata inti + 1 tambahan.
+- `src/worlds/animal-{kingdom,layout,plan}.js`, `src/core/{terrain-animal,budget}.js`, `tests/phase2.mjs` (`npm run test:phase2`), `docs/PHASE2_TAHAP_A.md`.
+- Keputusan D-032 s/d D-036.
+
+### Diketahui
+- Pengguna melaporkan lisan "sudah bagus". FPS, perangkat target (Xiaomi Pad 7 Pro), dan uji rinci belum dilaporkan.
+- Sandbox: `test:smoke` 28/28, `test:phase2` 17/17, `npm run build` berhasil (vite 7.3.7). Ini bukan uji WebGL.
+- Dokumen ini diperbarui sesi 5; `main` belum berisi kode PHASE 1/2.
+
 ## 2026-10-31 — PHASE 1 dijalankan pengguna di PC (laporan lisan "aman")
 
 ### Ditambahkan
