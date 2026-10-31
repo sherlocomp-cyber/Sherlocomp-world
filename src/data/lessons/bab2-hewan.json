@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "_catatan": "Transkripsi manual dari halaman scan PDF 'B-Arab-kelas-3-Bab-2.pdf'. Harakat dipertahankan sebagaimana tercetak (termasuk alif khanjariyah pada هٰذَا/ذٰلِكَ). meaning_source: book_text = kata Indonesia tertulis di buku; book_picture = hanya dari gambar+label di buku; general_knowledge = tidak ada di buku, WAJIB diverifikasi guru. Entri bertanda verify:true perlu dicek ulang terhadap PDF.",
+  "lesson": {
+    "id": "bab2",
+    "world": "animal-kingdom",
+    "lesson_ar": "الدَّرْسُ الثَّانِي",
+    "title_ar": "أَسْمَاءُ الْحَيَوَانَاتِ",
+    "title_id": "Nama-nama Hewan",
+    "book": "Semangat Belajar Bahasa Arab untuk MI Kelas III",
+    "pages_present": "30-42, 45-47",
+    "pages_missing": [43, 44],
+    "pages_missing_note": "Halaman 43-44 (kemungkinan teks qira'ah dan soal 1-2 latihan membaca) TIDAK ada di PDF. Halaman pembuka bab (tujuan pembelajaran) juga tidak ada. Minta pengguna melengkapi."
+  },
+  "vocab": [
+    {"id": "b2-v01", "ar": "أَرْنَبٌ", "id_text": "kelinci", "meaning_source": "book_text", "gender": "m", "page": 30, "tier": "core"},
+    {"id": "b2-v02", "ar": "سُلَحْفَاةٌ", "id_text": "kura-kura", "meaning_source": "book_text", "gender": "f", "page": 30, "tier": "core"},
+    {"id": "b2-v03", "ar": "فِيلٌ", "id_text": "gajah", "meaning_source": "book_text", "gender": "m", "page": 31, "tier": "core"},
+    {"id": "b2-v04", "ar": "زَرَافَةٌ", "id_text": "jerapah", "meaning_source": "book_picture", "gender": "f", "page": 31, "tier": "core"},
+    {"id": "b2-v05", "ar": "طَاوُوسٌ", "id_text": "merak", "meaning_source": "book_picture", "gender": null, "page": 31, "tier": "core"},
+    {"id": "b2-v06", "ar": "بَطَّةٌ", "id_text": "bebek", "meaning_source": "book_text", "gender": "f", "page": 31, "tier": "core"},
+    {"id": "b2-v07", "ar": "غَزَالٌ", "id_text": "rusa", "meaning_source": "book_text", "gender": "m", "page": 31, "tier": "core"},
+    {"id": "b2-v08", "ar": "حِصَانٌ", "id_text": "kuda", "meaning_source": "book_picture", "gender": "m", "page": 31, "tier": "core"},
+    {"id": "b2-v09", "ar": "جَمَلٌ", "id_text": "unta", "meaning_source": "book_text", "gender": null, "page": 32, "tier": "core"},
+    {"id": "b2-v10", "ar": "دُبٌّ", "id_text": "beruang", "meaning_source": "book_text", "gender": null, "page": 32, "tier": "core"},
+    {"id": "b2-v11", "ar": "أَسَدٌ", "id_text": "singa", "meaning_source": "book_text", "gender": "m", "page": 32, "tier": "core"},
+    {"id": "b2-v12", "ar": "ذِئْبٌ", "id_text": "serigala", "meaning_source": "book_picture", "gender": null, "page": 32, "tier": "core"},
+    {"id": "b2-v13", "ar": "كَرْكَدَنٌّ", "id_text": "badak", "meaning_source": "book_picture", "gender": null, "page": 32, "tier": "core"},
+    {"id": "b2-v14", "ar": "حِرْبَاءُ", "id_text": "bunglon", "meaning_source": "book_text", "gender": null, "page": 32, "tier": "core", "verify": true, "note": "Harakat akhir tercetak dhammah tunggal (bukan tanwin) pada daftar dan label gambar; pertahankan sebagaimana buku, konfirmasi ke guru."},
+    {"id": "b2-v15", "ar": "قِرْدٌ", "id_text": "monyet", "meaning_source": "book_picture", "gender": "m", "page": 33, "tier": "core"},
+    {"id": "b2-v16", "ar": "ثُعْبَانٌ", "id_text": "ular", "meaning_source": "book_text", "gender": null, "page": 33, "tier": "core"},
+    {"id": "b2-v17", "ar": "نَمِرٌ", "id_text": "harimau", "meaning_source": "book_text", "gender": null, "page": 33, "tier": "core"},
+    {"id": "b2-v18", "ar": "تِمْسَاحٌ", "id_text": "buaya", "meaning_source": "book_text", "gender": null, "page": 33, "tier": "core"},
+    {"id": "b2-v19", "ar": "بَقَرَةٌ", "id_text": "sapi", "meaning_source": "book_text", "gender": "f", "page": 33, "tier": "core"},
+    {"id": "b2-v20", "ar": "حَمَامَةٌ", "id_text": "merpati", "meaning_source": "book_text", "gender": "f", "page": 33, "tier": "core"},
+    {"id": "b2-v21", "ar": "سَمَكٌ", "id_text": "ikan", "meaning_source": "book_picture", "gender": null, "page": 34, "tier": "core"}
+  ],
+  "extra_vocab": [
+    {"id": "b2-x01", "ar": "نَمْلَةٌ", "id_text": "semut", "meaning_source": "general_knowledge", "gender": "f", "page": 46, "tier": "extra", "verify": true, "note": "Hanya muncul di tabel kata tunjuk (هٰذِهِ); tanpa gambar dan tanpa arti di buku."},
+    {"id": "b2-x02", "ar": "دَجَاجَةٌ", "id_text": "ayam", "meaning_source": "book_text", "gender": "f", "page": 47, "tier": "extra", "note": "Muncul di tabel kata tunjuk (تِلْكَ) dan kalimat contoh; tanpa gambar."}
+  ],
+  "support_words": [
+    {"id": "b2-w01", "ar": "كَبِيرٌ", "id_text": "besar", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w02", "ar": "كَبِيرَةٌ", "id_text": "besar (muannats)", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w03", "ar": "صَغِيرٌ", "id_text": "kecil", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w04", "ar": "صَغِيرَةٌ", "id_text": "kecil (muannats)", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w05", "ar": "قَوِيٌّ", "id_text": "kuat", "meaning_source": "general_knowledge", "page": 35, "verify": true},
+    {"id": "b2-w06", "ar": "طَوِيلَةٌ", "id_text": "tinggi/panjang", "meaning_source": "general_knowledge", "page": 36, "verify": true},
+    {"id": "b2-w07", "ar": "جَمِيلَةٌ", "id_text": "cantik/indah", "meaning_source": "general_knowledge", "page": 45, "verify": true},
+    {"id": "b2-w08", "ar": "جِدًّا", "id_text": "sangat", "meaning_source": "general_knowledge", "page": 35, "verify": true},
+    {"id": "b2-w09", "ar": "مَا شَاءَ اللّٰهُ", "id_text": "masyaallah (ungkapan kagum)", "meaning_source": "general_knowledge", "page": 35},
+    {"id": "b2-w10", "ar": "نَعَمْ", "id_text": "ya", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w11", "ar": "لَا", "id_text": "bukan/tidak", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w12", "ar": "هَلْ", "id_text": "apakah (kata tanya ya/tidak)", "meaning_source": "book_text", "page": 47},
+    {"id": "b2-w13", "ar": "وَمَا ذٰلِكَ؟", "id_text": "dan apakah itu?", "meaning_source": "general_knowledge", "page": 35, "verify": true},
+    {"id": "b2-w14", "ar": "سَلْمَى", "id_text": "Salma (nama tokoh buku)", "meaning_source": "book_text", "page": 35},
+    {"id": "b2-w15", "ar": "انْظُرِي", "id_text": "lihatlah (kepada perempuan)", "meaning_source": "general_knowledge", "page": 35, "verify": true, "note": "Tercetak أُنْظُرِي (hamzah + dhammah); transkripsi di sini bentuk baku; cek PDF."}
+  ],
+  "demonstratives": [
+    {"id": "b2-g01", "ar": "هٰذَا", "id_text": "ini (mudzakkar)", "distance": "near", "meaning_source": "book_text", "page": 46},
+    {"id": "b2-g02", "ar": "هٰذِهِ", "id_text": "ini (muannats)", "distance": "near", "meaning_source": "book_text", "page": 46},
+    {"id": "b2-g03", "ar": "ذٰلِكَ", "id_text": "itu (mudzakkar)", "distance": "far", "meaning_source": "book_text", "page": 46},
+    {"id": "b2-g04", "ar": "تِلْكَ", "id_text": "itu (muannats)", "distance": "far", "meaning_source": "book_text", "page": 46},
+    {"rule": "هٰذَا / هٰذِهِ = kata tunjuk jarak dekat; ذٰلِكَ / تِلْكَ = kata tunjuk jarak jauh", "page": 46},
+    {"table": {"هٰذِهِ": ["بَطَّةٌ", "نَمْلَةٌ", "حَمَامَةٌ"], "هٰذَا": ["أَرْنَبٌ", "غَزَالٌ", "قِرْدٌ"], "تِلْكَ": ["بَقَرَةٌ", "زَرَافَةٌ", "دَجَاجَةٌ"], "ذٰلِكَ": ["حِصَانٌ", "فِيلٌ", "أَسَدٌ"]}, "pages": [46, 47]}
+  ],
+  "sentences_listen_repeat": [
+    {"id": "b2-sn01", "ar": "هٰذَا أَرْنَبٌ", "vocab": ["b2-v01"], "page": 34},
+    {"id": "b2-sn02", "ar": "هٰذِهِ سُلَحْفَاةٌ", "vocab": ["b2-v02"], "page": 34},
+    {"id": "b2-sn03", "ar": "ذٰلِكَ دُبٌّ", "vocab": ["b2-v10"], "page": 34},
+    {"id": "b2-sn04", "ar": "تِلْكَ زَرَافَةٌ", "vocab": ["b2-v04"], "page": 34},
+    {"id": "b2-sn05", "ar": "هٰذَا قِرْدٌ", "vocab": ["b2-v15"], "page": 34},
+    {"id": "b2-sn06", "ar": "هٰذِهِ بَطَّةٌ", "vocab": ["b2-v06"], "page": 34},
+    {"id": "b2-sn07", "ar": "ذٰلِكَ حِصَانٌ", "vocab": ["b2-v08"], "page": 34},
+    {"id": "b2-sn08", "ar": "تِلْكَ بَقَرَةٌ", "vocab": ["b2-v19"], "page": 34},
+    {"id": "b2-sn09", "ar": "ذٰلِكَ أَسَدٌ", "vocab": ["b2-v11"], "page": 34},
+    {"id": "b2-sn10", "ar": "تِلْكَ حَمَامَةٌ", "vocab": ["b2-v20"], "page": 34}
+  ],
+  "dialogues": [
+    {
+      "id": "b2-dlg-A",
+      "title_id": "Percakapan antara Usman dan Salma",
+      "teacher_note": "Guru memberikan contoh percakapan, kemudian peserta didik diminta memperagakannya.",
+      "pages": [35, 36, 37],
+      "id_translation_status": "draft_unverified (buku tidak menyertakan terjemah dialog)",
+      "lines": [
+        {"n": 1, "speaker": "Usman", "ar": "أُنْظُرِي، إِلَى هٰذَا الْحَيَوَانِ يَا سَلْمَى!", "id_draft": "Lihatlah hewan ini, Salma!", "verify": true},
+        {"n": 2, "speaker": "Salma", "ar": "مَا شَاءَ اللّٰهُ! هٰذَا الْحَيَوَانُ كَبِيرٌ جِدًّا!", "id_draft": "Masyaallah! Hewan ini besar sekali!"},
+        {"n": 3, "speaker": "Usman", "ar": "هٰذَا أَسَدٌ، الْأَسَدُ قَوِيٌّ", "id_draft": "Ini singa. Singa itu kuat."},
+        {"n": 4, "speaker": "Salma", "ar": "وَمَا ذٰلِكَ؟", "id_draft": "Lalu apa itu?"},
+        {"n": 5, "speaker": "Usman", "ar": "ذٰلِكَ فِيلٌ، الْفِيلُ كَبِيرٌ", "id_draft": "Itu gajah. Gajah itu besar."},
+        {"n": 6, "speaker": "Salma", "ar": "هَلْ هٰذِهِ زَرَافَةٌ؟", "id_draft": "Apakah ini jerapah?"},
+        {"n": 7, "speaker": "Usman", "ar": "نَعَمْ، هٰذِهِ زَرَافَةٌ", "id_draft": "Ya, ini jerapah."},
+        {"n": 8, "speaker": "Usman", "ar": "الزَّرَافَةُ طَوِيلَةٌ", "id_draft": "Jerapah itu tinggi."},
+        {"n": 9, "speaker": "Salma", "ar": "وَمَا ذٰلِكَ؟", "id_draft": "Lalu apa itu?"},
+        {"n": 10, "speaker": "Usman", "ar": "ذٰلِكَ قِرْدٌ", "id_draft": "Itu monyet."},
+        {"n": 11, "speaker": "Salma", "ar": "هَلْ ذٰلِكَ كَرْكَدَنٌّ؟", "id_draft": "Apakah itu badak?"},
+        {"n": 12, "speaker": "Usman", "ar": "نَعَمْ، ذٰلِكَ كَرْكَدَنٌ", "id_draft": "Ya, itu badak.", "verify": true, "note": "Tercetak كَرْكَدَنٌ (tanwin tanpa shaddah) berbeda dengan b2-v13; pertahankan sebagaimana buku."},
+        {"n": 13, "speaker": null, "ar": "الْكَرْكَدَنُّ قَوِيٌّ", "id_draft": "Badak itu kuat.", "verify": true, "note": "Penutur gelembung 13 tidak jelas dari gambar."}
+      ]
+    }
+  ],
+  "patterns": [
+    {"id": "b2-p01", "id_text": "Apakah ini kelinci? Ya, ini kelinci", "ar": "هَلْ هٰذَا أَرْنَبٌ؟ نَعَمْ، هٰذَا أَرْنَبٌ", "page": 47},
+    {"id": "b2-p02", "id_text": "Apakah itu kelinci? Bukan, itu beruang", "ar": "هَلْ ذٰلِكَ أَرْنَبٌ؟ لَا، ذٰلِكَ دُبٌّ", "page": 47},
+    {"id": "b2-p03", "id_text": "Apakah ini sapi? Ya, ini sapi", "ar": "هَلْ هٰذِهِ بَقَرَةٌ؟ نَعَمْ، هٰذِهِ بَقَرَةٌ", "page": 47},
+    {"id": "b2-p04", "id_text": "Apakah itu ayam? Bukan, itu bebek", "ar": "هَلْ تِلْكَ دَجَاجَةٌ؟ لَا، تِلْكَ بَطَّةٌ", "page": 47},
+    {"id": "b2-p05", "id_text": "Gajah itu besar", "ar": "الْفِيلُ كَبِيرٌ", "page": 47},
+    {"id": "b2-p06", "id_text": "Kelinci itu kecil", "ar": "الْأَرْنَبُ صَغِيرٌ", "page": 47},
+    {"id": "b2-p07", "id_text": "Sapi itu besar", "ar": "الْبَقَرَةُ كَبِيرَةٌ", "page": 47},
+    {"id": "b2-p08", "id_text": "Merpati itu kecil", "ar": "الْحَمَامَةُ صَغِيرَةٌ", "page": 47}
+  ],
+  "grammar": {
+    "isim_alam": {
+      "definition_id": "Isim alam adalah isim yang menunjukkan makna untuk nama orang, kota, negara, dan lain-lain.",
+      "page": 45,
+      "examples": [
+        {"id_text": "Mesir", "ar": "مِصْرُ", "verify": true, "note": "Pada scan terbaca مِصْرُ/مِصْرَى; cek PDF."},
+        {"id_text": "Lukman", "ar": "لُقْمَانُ"},
+        {"id_text": "Halimah", "ar": "حَلِيمَةُ"},
+        {"id_text": "Surabaya", "ar": "سُورَابَايَا", "verify": true}
+      ]
+    },
+    "dhamir_muttashil": {
+      "definition_id": "Dhamir muttasil adalah dhamir yang bersambung dengan kata lain baik dengan isim, fi'il atau dengan huruf.",
+      "pages": [45, 46],
+      "table": [
+        {"munfashil": "هُوَ", "muttashil": "ـهُ", "example": "أُسْرَةٌ + هُوَ = أُسْرَتُهُ", "id_text": "keluarganya (lk)"},
+        {"munfashil": "هِيَ", "muttashil": "ـهَا", "example": "أُسْرَةٌ + هِيَ = أُسْرَتُهَا", "id_text": "keluarganya (pr)"},
+        {"munfashil": "أَنَا", "muttashil": "ـي", "example": "أُسْرَةٌ + أَنَا = أُسْرَتِي", "id_text": "keluargaku"},
+        {"munfashil": "أَنْتَ", "muttashil": "ـكَ", "example": "أُسْرَةٌ + أَنْتَ = أُسْرَتُكَ", "id_text": "keluargamu (lk)"},
+        {"munfashil": "أَنْتِ", "muttashil": "ـكِ", "example": "أُسْرَةٌ + أَنْتِ = أُسْرَتُكِ", "id_text": "keluargamu (pr)"}
+      ]
+    }
+  },
+  "exercises": [
+    {"id": "b2-ex01", "type": "listen_tick", "pages": [37, 38], "audio": "QR code 'Dengarkan' (audio TIDAK tersedia di PDF)", "items": [
+      {"n": 1, "pictures": ["b2-v13", "b2-v15", "b2-v17"]},
+      {"n": 2, "pictures": ["b2-v20", "b2-v11", "b2-v18"], "verify": true},
+      {"n": 3, "pictures": ["b2-v08", "b2-v03", "b2-v09"], "verify": true},
+      {"n": 4, "pictures": ["b2-v01", "b2-v12", "b2-v04"], "verify": true},
+      {"n": 5, "pictures": ["b2-v21", "b2-v07", "b2-v15"], "verify": true}
+    ], "note": "Halaman 38 terscan terbalik 180 derajat. Kunci jawaban/naskah audio tidak ada di buku."},
+    {"id": "b2-ex02", "type": "complete_dialogue", "pages": [39, 40], "note": "Penomoran gelembung di buku tidak konsisten (nomor 3 dua kali, nomor 6 tidak ada). Jawaban di bawah DITURUNKAN dari dialog A (bukan kunci jawaban buku).", "blanks": [
+      {"ar_template": "هَلْ هٰذِهِ ... ؟", "answer_derived": "زَرَافَةٌ"},
+      {"ar_template": "نَعَمْ ... زَرَافَةٌ", "answer_derived": "هٰذِهِ"},
+      {"ar_template": "الزَّرَافَةُ ....", "answer_derived": "طَوِيلَةٌ"},
+      {"ar_template": "هٰذَا ... ، الْأَسَدُ قَوِيٌّ", "answer_derived": "أَسَدٌ"},
+      {"ar_template": "... ذٰلِكَ؟", "answer_derived": "وَمَا"},
+      {"ar_template": "ذٰلِكَ ... ، الْفِيلُ كَبِيرٌ", "answer_derived": "فِيلٌ"},
+      {"ar_template": "ذٰلِكَ ....", "answer_derived": "قِرْدٌ"}
+    ]},
+    {"id": "b2-ex03", "type": "match_meaning", "pages": [40, 41], "note": "Pasangan DITURUNKAN dari gambar+label halaman 30-34 (buku tidak menyertakan kunci).", "pairs_derived": [
+      {"ar_vocab": "b2-v18", "id_text": "Buaya", "letter": "c"},
+      {"ar_vocab": "b2-v11", "id_text": "Singa", "letter": "e"},
+      {"ar_vocab": "b2-v10", "id_text": "Beruang", "letter": "d"},
+      {"ar_vocab": "b2-v14", "id_text": "Bunglon", "letter": "a"},
+      {"ar_vocab": "b2-v09", "id_text": "Unta", "letter": "b"},
+      {"ar_vocab": "b2-v02", "id_text": "Kura-kura", "letter": "i"},
+      {"ar_vocab": "b2-v17", "id_text": "Harimau", "letter": "h"},
+      {"ar_vocab": "b2-v01", "id_text": "Kelinci", "letter": "f"},
+      {"ar_vocab": "b2-v07", "id_text": "Rusa", "letter": "j"},
+      {"ar_vocab": "b2-v16", "id_text": "Ular", "letter": "g"}
+    ]},
+    {"id": "b2-ex04", "type": "write_copy", "pages": [41, 42], "words": ["b2-v11", "b2-v01", "b2-v17", "b2-v21", "b2-v06"]},
+    {"id": "b2-ex05", "type": "arrange_letters", "page": 42, "note": "Urutan huruf yang tercetak perlu dicek ulang pada PDF; target kata sudah jelas.", "items": [
+      {"n": 1, "target_vocab": "b2-v13"},
+      {"n": 2, "target_vocab": "b2-v14"},
+      {"n": 3, "target_vocab": "b2-v05"},
+      {"n": 4, "target_vocab": "b2-v20"},
+      {"n": 5, "target_vocab": "b2-v16"}
+    ], "verify": true},
+    {"id": "b2-ex06", "type": "yes_no_questions", "page": 45, "note": "Soal 1-2 dan teks qira'ah ada di halaman 43-44 yang hilang dari PDF.", "items": [
+      {"n": 3, "ar": "هَلِ الزَّرَافَةُ طَوِيلَةٌ؟", "answer_derived": "نَعَمْ (dari dialog A, baris 8)"},
+      {"n": 4, "ar": "هَلِ الْحَمَامَةُ جَمِيلَةٌ؟", "answer": null},
+      {"n": 5, "ar": "هَلْ هٰذِهِ سُلَحْفَاةٌ؟", "answer_derived": "نَعَمْ (gambar kura-kura menyertai soal)"}
+    ]}
+  ],
+  "image_inventory": {
+    "note": "Gambar buku adalah referensi saja; game memakai ilustrasi ORIGINAL (lihat ASSET_REQUIREMENTS.md). Jangan menyalin gambar buku.",
+    "vocab_pictures": "b2-v01..b2-v21 masing-masing satu gambar (hlm 30-34)",
+    "dialogue_scenes": "kebun binatang: Usman dan Salma (hlm 35-37, 39-40)"
+  }
+}
