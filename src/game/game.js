@@ -1,5 +1,5 @@
 // Inti permainan: renderer, scene, pemain, kamera orang ketiga, interaksi, bintang.
-// PHASE 1: dunia "starter" (Lembah Awal). PHASE 2: dunia "animal" (Animal Kingdom), dipilih lewat opsi worldId.
+// PHASE 1: dunia "starter" (Lembah Awal). PHASE 2: dunia "animal" (Animal Kingdom) dan "sickness" (Kota Sehat), dipilih lewat opsi worldId.
 
 import * as THREE from 'three';
 import { PLAYER, WORLD_RADIUS } from '../core/config.js';
@@ -13,6 +13,7 @@ import { load, save } from '../core/storage.js';
 import { createHero } from '../characters/hero.js';
 import { buildStarterArea, SPAWN as STARTER_SPAWN } from '../worlds/starter-area.js';
 import { buildAnimalKingdom } from '../worlds/animal-kingdom.js';
+import { buildSicknessKingdom } from '../worlds/sickness-kingdom.js';
 import { CAMERA, clampPitch, cameraOffset, occludeScale } from './camera-rig.js';
 
 const STARS_KEY = 'p1.stars';
@@ -20,7 +21,7 @@ const STARS_KEY = 'p1.stars';
 export class Game {
   /**
    * @param {{stage:HTMLElement, controls:object, profile:{gender:string,color:string,name:string},
-   *          quality:string, antialias:boolean, worldId?:'starter'|'animal',
+   *          quality:string, antialias:boolean, worldId?:'starter'|'animal'|'sickness',
    *          callbacks:{onStars:Function,onToast:Function,onPrompt:Function,onAutoPause:Function,onEscape:Function}}} opts
    */
   constructor({ stage, controls, profile, quality, antialias, worldId = 'starter', callbacks }) {
@@ -66,11 +67,16 @@ export class Game {
     this.scene.add(this.sun, this.sun.target);
 
     // --- dunia ---
-    this.worldId = worldId === 'animal' ? 'animal' : 'starter';
-    this.starsKey = this.worldId === 'animal' ? 'p2.animal.stars' : STARS_KEY;
+    this.worldId = worldId === 'animal' || worldId === 'sickness' ? worldId : 'starter';
+    this.starsKey = { animal: 'p2.animal.stars', sickness: 'p2.sickness.stars' }[this.worldId] || STARS_KEY;
     const collected = load(this.starsKey, []);
     const collectedIds = Array.isArray(collected) ? collected : [];
-    this.world = this.worldId === 'animal' ? buildAnimalKingdom({ collectedIds }) : buildStarterArea({ collectedIds });
+    const buildWorld = { animal: buildAnimalKingdom, sickness: buildSicknessKingdom }[this.worldId] || buildStarterArea;
+    this.world = buildWorld({ collectedIds });
+    if (this.world.atmosphere) {
+      this.scene.background.set(this.world.atmosphere.background);
+      this.scene.fog.color.set(this.world.atmosphere.fog);
+    }
     this.heightAt = this.world.heightAt || starterHeightAt;
     this.worldRadius = this.world.radius || WORLD_RADIUS;
     const spawn = this.world.spawn || STARTER_SPAWN;

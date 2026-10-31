@@ -51,7 +51,18 @@ Penyimpanan IndexedDB dan profil banyak siswa (PHASE 6), aksesori karakter (aset
 - [ ] FPS, draw call, segitiga di HP, Xiaomi Pad 7 Pro, laptop (Low/Medium/High) BELUM dilaporkan; tetapkan ulang anggaran D-033
 - [ ] Persetujuan guru/pengguna atas D-032 (pengelompokan hewan per wilayah)
 - [ ] Jadikan Animal Kingdom default setelah FPS disetujui (D-034)
-- [ ] Tahap B: Sickness Kingdom (Bab 3 penyakit); hewan/NPC sungguhan = PHASE 3
+- [ ] Hewan/NPC sungguhan = PHASE 3
+
+### Tahap B: Sickness Kingdom "Kota Sehat" (Bab 3 penyakit) — KODE DITULIS (sesi 6, 2026-11-01); DILAPORKAN "SUDAH AMAN" DI XIAOMI PAD 7 (LISAN)
+- [x] Kode: `sickness-{kingdom,layout,plan,art}.js`, `terrain-sickness.js`, `world-kit.js`; disambung ke `game.js`/`main.js` lewat `?world=sickness`
+- [x] Uji Node `test:phase2b` 19/19 + uji alur tiruan Three.js (sandbox; data minimal, bukan WebGL)
+- [ ] Jalankan di PC: `git status`, `npm run test:smoke`, `npm run test:phase2`, `npm run test:phase2b`, `npm run build`
+- [~] Dibuka pengguna di Xiaomi Pad 7 (`/?world=sickness&debug=1`): dilaporkan "sudah aman" (laporan lisan, tanpa rincian; tidak ada angka FPS). Daftar uji manual di `docs/PHASE2_TAHAP_B.md` belum diisi
+- [ ] Pastikan `?world=animal` dan dunia PHASE 1 tetap jalan (game.js diubah)
+- [ ] FPS, draw call, segitiga di HP, Xiaomi Pad 7 Pro, laptop (Low/Medium/High); tetapkan ulang anggaran D-033
+- [ ] Persetujuan guru/pengguna atas D-038 (pengelompokan kosakata per wilayah)
+- [ ] Dibuat ulang di Flow: `health_wasfa` (simbol merah, D-014)
+- [ ] Perbarui `NEXT_SESSION_PROMPT.md`; rapi-rapi `world-kit.js` vs `animal-kingdom.js` (D-039)
 
 ## PHASE 3–10
 

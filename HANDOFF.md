@@ -1,8 +1,16 @@
 # HANDOFF
 
-Diperbarui: 2026-10-31 (sesi 5: PHASE 2 tahap A Animal Kingdom ada di `develop` dan dilaporkan "sudah bagus")
+Diperbarui: 2026-11-01 (sesi 6: PHASE 2 tahap B Sickness Kingdom ditulis di PC, BELUM diuji di browser)
 
-## 0. Pembaruan sesi 5 (BACA DULU)
+## 0. Pembaruan sesi 6 (BACA DULU)
+- LAPORAN PENGGUNA (lisan, 2026-11-01): tahap B dibuka di Xiaomi Pad 7 dan "sudah aman". Tanpa rincian per fitur, TANPA angka FPS/draw call/segitiga; tidak dilaporkan apakah `npm run build`, `test:smoke`, `test:phase2`, commit, atau cek ulang `?world=animal` dan dunia PHASE 1 sudah dilakukan. Jangan diklaim.
+- PHASE 2 tahap B (Sickness Kingdom "Kota Sehat") DITULIS langsung di folder PC (`C:\Users\Administrator\Sherlocomp-world`, cabang `develop`) lewat ekstensi akses file. BELUM di-commit/di-push oleh sesi ini (tidak ada akses git). Buka dengan `/?world=sickness&debug=1`. Detail dan daftar uji manual: `docs/PHASE2_TAHAP_B.md`.
+- File baru: `src/worlds/sickness-{kingdom,layout,plan,art}.js`, `src/worlds/world-kit.js`, `src/core/terrain-sickness.js`, `tests/phase2b.mjs`, `docs/PHASE2_TAHAP_B.md`. File diubah: `src/game/game.js` (opsi `worldId` `'sickness'` + `atmosphere`), `src/main.js`, `package.json` (skrip `test:phase2b`), `DECISIONS.md` (D-037..D-041), `TASKS.md`, `CHANGELOG.md`, `TEST_REPORT.md`, `HANDOFF.md`.
+- Bukti: sandbox `test:phase2b` 19/19 + uji alur dengan TIRUAN Three.js. TIDAK dijalankan: `npm run build`, `test:smoke`, `test:phase2`, browser/WebGL, FPS. Setelah `game.js` diubah, pastikan `?world=animal` dan dunia PHASE 1 tetap jalan.
+- Langkah pertama pengguna di PC: `git status`, lalu `npm run test:smoke && npm run test:phase2 && npm run test:phase2b && npm run build`, lalu buka `/?world=sickness&debug=1`, lalu commit.
+- PHASE 2 BELUM selesai: FPS terukur di Xiaomi Pad 7 Pro belum ada; D-032 dan D-038 belum disetujui guru/pengguna. `NEXT_SESSION_PROMPT.md` sudah diperbarui (sesi 6).
+
+## 0b. Pembaruan sesi 5
 - PHASE 2 tahap A (Animal Kingdom) sudah di `develop` (commit 4eb920c). Buka dengan `/?world=animal&debug=1`. Detail: `docs/PHASE2_TAHAP_A.md`.
 - Bukti: sandbox `test:smoke` 28/28, `test:phase2` 17/17, `npm run build` berhasil; pengguna melaporkan lisan "sudah bagus". FPS dan perangkat target BELUM diukur, jadi PHASE 2 BELUM selesai.
 - Berikutnya: (1) ukur FPS di Xiaomi Pad 7 Pro dkk, tetapkan ulang D-033; (2) persetujuan D-032; (3) tahap B Sickness Kingdom. Jangan menulis ulang kode yang ada.
